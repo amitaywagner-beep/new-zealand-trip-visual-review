@@ -37,6 +37,16 @@ jobs:
         run: npm run capture
         continue-on-error: true
 
+      - name: Upload visual review artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-review-screenshots
+          path: |
+            screenshots/
+            visual-review-manifest.json
+          if-no-files-found: warn
+          retention-days: 7
+
       - name: Publish screenshots to repository
         run: |
           git config user.name "github-actions[bot]"
