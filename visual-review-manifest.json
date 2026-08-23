@@ -1,0 +1,964 @@
+{
+  "generatedAt": "2026-08-23T17:09:30.912Z",
+  "sourceSiteVersion": "31",
+  "captureCompletedAt": "2026-08-23T18:26:12.970Z",
+  "mode": "screenshots",
+  "captureEnvironment": "github-actions-playwright",
+  "sourceManifestUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/manifest.json",
+  "screenshots": [
+    {
+      "id": "desktop-now",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/desktop-now",
+      "imagePath": "screenshots/desktop-now.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "now",
+      "state": {
+        "screen": "now"
+      },
+      "capturedAt": "2026-08-23T18:22:25.396Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "desktop-route-satellite",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/desktop-route-satellite",
+      "imagePath": "screenshots/desktop-route-satellite.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite"
+      },
+      "capturedAt": "2026-08-23T18:22:34.187Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "desktop-route-map",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/desktop-route-map",
+      "imagePath": "screenshots/desktop-route-map.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "map"
+      },
+      "capturedAt": "2026-08-23T18:22:40.815Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "desktop-days",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/desktop-days",
+      "imagePath": "screenshots/desktop-days.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days"
+      },
+      "capturedAt": "2026-08-23T18:22:46.052Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "desktop-bookings",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/desktop-bookings",
+      "imagePath": "screenshots/desktop-bookings.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings"
+      },
+      "capturedAt": "2026-08-23T18:22:51.499Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "desktop-preparations",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/desktop-preparations",
+      "imagePath": "screenshots/desktop-preparations.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "preparations",
+      "state": {
+        "screen": "preparations"
+      },
+      "capturedAt": "2026-08-23T18:22:56.618Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "desktop-route-main-map",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/desktop-route-main-map",
+      "imagePath": "screenshots/desktop-route-main-map.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".atlas-route-controls"
+      },
+      "capturedAt": "2026-08-23T18:23:02.077Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "station-rotorua",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/station-rotorua",
+      "imagePath": "screenshots/station-rotorua.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "rotorua",
+        "focusStop": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "capturedAt": "2026-08-23T18:23:07.586Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "station-new-plymouth",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/station-new-plymouth",
+      "imagePath": "screenshots/station-new-plymouth.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "new-plymouth",
+        "focusStop": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "capturedAt": "2026-08-23T18:23:13.342Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "station-napier",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/station-napier",
+      "imagePath": "screenshots/station-napier.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "napier",
+        "focusStop": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "capturedAt": "2026-08-23T18:23:19.457Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "station-palmerston-north",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/station-palmerston-north",
+      "imagePath": "screenshots/station-palmerston-north.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "palmerston",
+        "focusStop": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "capturedAt": "2026-08-23T18:23:25.148Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "route-segment-09-card",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/route-segment-09-card",
+      "imagePath": "screenshots/route-segment-09-card.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedSegmentId": "road-segment-09",
+        "anchor": "#road-segment-09"
+      },
+      "capturedAt": "2026-08-23T18:23:31.859Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/6/39/62",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/6/39/63",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/6/38/62",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/6/38/63",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/6/40/62",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/6/40/63",
+            "error": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "route-segment-09-map",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/route-segment-09-map",
+      "imagePath": "screenshots/route-segment-09-map.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedSegmentId": "road-segment-09",
+        "focusSegment": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "capturedAt": "2026-08-23T18:23:38.253Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/254",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/252",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/158/251",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/158/255",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/251",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/255",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/251",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/255",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/254",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/159/253",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/159/252",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/159/254",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/156/253",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/158/255",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/156/254",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/159/251",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/160/252",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/160/251",
+            "error": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    },
+    {
+      "id": "trip-at-a-glance",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/trip-at-a-glance",
+      "imagePath": "screenshots/trip-at-a-glance.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".route-overview-graphic"
+      },
+      "capturedAt": "2026-08-23T18:23:43.937Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "regional-windows",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/regional-windows",
+      "imagePath": "screenshots/regional-windows.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".regional-atlas"
+      },
+      "capturedAt": "2026-08-23T18:23:49.757Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "region-coromandel",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/region-coromandel",
+      "imagePath": "screenshots/region-coromandel.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": "[data-review-region='coromandel']"
+      },
+      "capturedAt": "2026-08-23T18:23:55.233Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "region-rotorua-taupo",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/region-rotorua-taupo",
+      "imagePath": "screenshots/region-rotorua-taupo.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": "[data-review-region='rotorua-taupo']"
+      },
+      "capturedAt": "2026-08-23T18:24:01.987Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "region-taranaki",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/region-taranaki",
+      "imagePath": "screenshots/region-taranaki.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": "[data-review-region='taranaki']"
+      },
+      "capturedAt": "2026-08-23T18:24:07.384Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "region-tongariro",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/region-tongariro",
+      "imagePath": "screenshots/region-tongariro.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": "[data-review-region='tongariro']"
+      },
+      "capturedAt": "2026-08-23T18:24:12.822Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "region-hawkes-bay",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/region-hawkes-bay",
+      "imagePath": "screenshots/region-hawkes-bay.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": "[data-review-region='hawkes-bay']"
+      },
+      "capturedAt": "2026-08-23T18:24:18.465Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "day-01-open",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/day-01-open",
+      "imagePath": "screenshots/day-01-open.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 1
+      },
+      "capturedAt": "2026-08-23T18:24:23.431Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "day-04-open",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/day-04-open",
+      "imagePath": "screenshots/day-04-open.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 4
+      },
+      "capturedAt": "2026-08-23T18:24:29.271Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "day-06-open",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/day-06-open",
+      "imagePath": "screenshots/day-06-open.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 6
+      },
+      "capturedAt": "2026-08-23T18:24:34.306Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "day-tongariro-open",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/day-tongariro-open",
+      "imagePath": "screenshots/day-tongariro-open.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 14
+      },
+      "capturedAt": "2026-08-23T18:24:39.454Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "day-wedding-open",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/day-wedding-open",
+      "imagePath": "screenshots/day-wedding-open.png",
+      "viewport": "1440x1000",
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 18
+      },
+      "capturedAt": "2026-08-23T18:24:44.448Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "day-04-minimap",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/day-04-minimap",
+      "imagePath": "screenshots/day-04-minimap.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 4,
+        "anchor": ".day-mini-map-card"
+      },
+      "capturedAt": "2026-08-23T18:24:49.368Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "day-06-minimap",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/day-06-minimap",
+      "imagePath": "screenshots/day-06-minimap.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 6,
+        "anchor": ".day-mini-map-card"
+      },
+      "capturedAt": "2026-08-23T18:24:54.422Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "hotel-breakfast-included",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/hotel-breakfast-included",
+      "imagePath": "screenshots/hotel-breakfast-included.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings",
+        "hotelId": "manha",
+        "anchor": "#hotel-review-manha"
+      },
+      "capturedAt": "2026-08-23T18:24:59.208Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "hotel-breakfast-paid",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/hotel-breakfast-paid",
+      "imagePath": "screenshots/hotel-breakfast-paid.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings",
+        "hotelId": "devon",
+        "anchor": "#hotel-review-devon"
+      },
+      "capturedAt": "2026-08-23T18:25:04.078Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "hotel-no-breakfast-groceries",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/hotel-no-breakfast-groceries",
+      "imagePath": "screenshots/hotel-no-breakfast-groceries.png",
+      "viewport": "1440x1000",
+      "fullPage": false,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings",
+        "hotelId": "le-chalet",
+        "openGroceries": true,
+        "anchor": "#hotel-review-le-chalet"
+      },
+      "capturedAt": "2026-08-23T18:25:09.072Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "mobile-now",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/mobile-now",
+      "imagePath": "screenshots/mobile-now.png",
+      "viewport": "390x844",
+      "fullPage": true,
+      "screen": "now",
+      "state": {
+        "screen": "now"
+      },
+      "capturedAt": "2026-08-23T18:25:14.323Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "mobile-route",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/mobile-route",
+      "imagePath": "screenshots/mobile-route.png",
+      "viewport": "390x844",
+      "fullPage": true,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite"
+      },
+      "capturedAt": "2026-08-23T18:25:20.956Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "mobile-days",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/mobile-days",
+      "imagePath": "screenshots/mobile-days.png",
+      "viewport": "390x844",
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days"
+      },
+      "capturedAt": "2026-08-23T18:25:27.576Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "mobile-bookings",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/mobile-bookings",
+      "imagePath": "screenshots/mobile-bookings.png",
+      "viewport": "390x844",
+      "fullPage": true,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings"
+      },
+      "capturedAt": "2026-08-23T18:25:33.165Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "mobile-preparations",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/mobile-preparations",
+      "imagePath": "screenshots/mobile-preparations.png",
+      "viewport": "390x844",
+      "fullPage": true,
+      "screen": "preparations",
+      "state": {
+        "screen": "preparations"
+      },
+      "capturedAt": "2026-08-23T18:25:38.088Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "mobile-route-all",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/mobile-route-all",
+      "imagePath": "screenshots/mobile-route-all.png",
+      "viewport": "390x844",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".atlas-route-layout"
+      },
+      "capturedAt": "2026-08-23T18:25:43.666Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "mobile-route-zoom",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/mobile-route-zoom",
+      "imagePath": "screenshots/mobile-route-zoom.png",
+      "viewport": "390x844",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "rotorua",
+        "focusStop": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "capturedAt": "2026-08-23T18:25:49.547Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "mobile-route-poi-open",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/mobile-route-poi-open",
+      "imagePath": "screenshots/mobile-route-poi-open.png",
+      "viewport": "390x844",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedSegmentId": "road-segment-05",
+        "reviewWaypointId": "waitomo",
+        "anchor": ".atlas-route-layout"
+      },
+      "capturedAt": "2026-08-23T18:25:55.363Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "mobile-trip-at-a-glance",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/mobile-trip-at-a-glance",
+      "imagePath": "screenshots/mobile-trip-at-a-glance.png",
+      "viewport": "390x844",
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".route-overview-graphic"
+      },
+      "capturedAt": "2026-08-23T18:26:00.914Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "tablet-route-portrait",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/tablet-route-portrait",
+      "imagePath": "screenshots/tablet-route-portrait.png",
+      "viewport": "768x1024",
+      "fullPage": true,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite"
+      },
+      "capturedAt": "2026-08-23T18:26:07.019Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    },
+    {
+      "id": "tablet-route-landscape",
+      "reviewPageUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/pages/tablet-route-landscape",
+      "imagePath": "screenshots/tablet-route-landscape.png",
+      "viewport": "1024x768",
+      "fullPage": true,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite"
+      },
+      "capturedAt": "2026-08-23T18:26:12.944Z",
+      "success": true,
+      "error": null,
+      "consoleSummary": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      }
+    }
+  ],
+  "summary": {
+    "total": 41,
+    "succeeded": 41,
+    "failed": 0
+  }
+}
