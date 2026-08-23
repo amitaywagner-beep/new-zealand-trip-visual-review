@@ -6,6 +6,8 @@ const SITE_BASE = 'https://amitai-new-zealand-trip.amitaywagner.chatgpt.site';
 const MANIFEST_URL = `${SITE_BASE}/visual-review/manifest.json`;
 const OUT_DIR = path.resolve('screenshots');
 const OUT_MANIFEST = path.resolve('visual-review-manifest.json');
+const PUBLIC_RAW_BASE = 'https://raw.githubusercontent.com/amitaywagner-beep/new-zealand-trip-visual-review/main';
+const PUBLIC_MANIFEST_URL = `${PUBLIC_RAW_BASE}/visual-review-manifest.json`;
 
 await fs.mkdir(OUT_DIR, { recursive: true });
 
@@ -42,6 +44,8 @@ for (const item of sourceManifest.screenshots ?? []) {
   const reviewPageUrl = new URL(item.url, SITE_BASE).href;
   const fileName = `${item.id}.png`;
   const filePath = path.join(OUT_DIR, fileName);
+  const imagePath = `screenshots/${fileName}`;
+  const imageUrl = `${PUBLIC_RAW_BASE}/${imagePath}`;
   let success = true;
   let error = null;
 
@@ -82,7 +86,8 @@ for (const item of sourceManifest.screenshots ?? []) {
   results.push({
     id: item.id,
     reviewPageUrl,
-    imagePath: `screenshots/${fileName}`,
+    imagePath,
+    imageUrl,
     viewport: item.viewport,
     fullPage: Boolean(item.fullPage),
     screen: item.screen,
@@ -109,6 +114,7 @@ const output = {
   mode: 'screenshots',
   captureEnvironment: 'github-actions-playwright',
   sourceManifestUrl: MANIFEST_URL,
+  publicManifestUrl: PUBLIC_MANIFEST_URL,
   screenshots: results,
   summary: {
     total: results.length,
