@@ -1,0 +1,12 @@
+{
+  "name": "new-zealand-trip-visual-review",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture": "node capture.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}
