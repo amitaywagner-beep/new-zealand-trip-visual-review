@@ -2,6 +2,12 @@ name: Visual Review Capture
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'capture.mjs'
+      - 'package.json'
+      - '.github/workflows/visual-review.yml'
   schedule:
     - cron: '17 3 * * *'
 
