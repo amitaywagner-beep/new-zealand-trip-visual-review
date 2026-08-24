@@ -10,7 +10,7 @@ await test('mobile-overview-structure',async()=>{
  const o=p.locator('.route-overview-graphic').first(); const box=await o.boundingBox(); if(!box) throw new Error('overview missing');
  const info=await o.evaluate(el=>({
    height:el.getBoundingClientRect().height,width:el.getBoundingClientRect().width,
-   buttons:[...el.querySelectorAll('button,a,[role="button"]')].map(x=>(x.innerText||x.textContent||'').trim()).filter(Boolean),
+   buttons:[...el.querySelectorAll('button,a,[role="button"]')].map(x=>{const r=x.getBoundingClientRect(),s=getComputedStyle(x);return{text:(x.innerText||x.textContent||'').trim(),width:r.width,height:r.height,fontSize:s.fontSize,overflowX:x.scrollWidth>x.clientWidth,overflowY:x.scrollHeight>x.clientHeight}}).filter(x=>x.text),
    maps:el.querySelectorAll('.leaflet-container,[class*="map"],canvas').length,
    images:el.querySelectorAll('img').length,
    attributions:[...el.querySelectorAll('*')].filter(x=>/Esri|Maxar|OpenStreetMap/.test(x.textContent||'')).length,
