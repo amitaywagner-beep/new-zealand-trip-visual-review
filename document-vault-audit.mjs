@@ -44,3 +44,5 @@ await browser.close();
 const result={generatedAt:new Date().toISOString(),siteVersion:manifest.siteVersion,totalDocumentReviewStates:docStates.length,documentReviewStateIds:docStates.map(x=>x.id),pages,exports:{tripDataStatus:tripData.status,tripReviewStatus:tripReview.status,exposure:exportExposure}};
 await fs.writeFile('document-vault-audit.json',JSON.stringify(result,null,2));
 console.log(JSON.stringify({siteVersion:result.siteVersion,states:result.documentReviewStateIds,pages:pages.map(x=>({id:x.id,success:x.success,fileInputs:x.info?.fileInputs?.length||0,overflow:(x.info?.width||0)>(x.info?.clientWidth||0)})),exportExposure},null,2));
+
+// Manual audit refresh for site version 38: 2026-08-24T17:38+03:00
