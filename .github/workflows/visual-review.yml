@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'capture.mjs'
+      - 'document-vault-audit.mjs'
       - 'package.json'
       - '.github/workflows/visual-review.yml'
   schedule:
@@ -37,6 +38,10 @@ jobs:
         run: npm run capture
         continue-on-error: true
 
+      - name: Audit document vault
+        run: node document-vault-audit.mjs
+        continue-on-error: true
+
       - name: Upload visual review artifact
         uses: actions/upload-artifact@v4
         with:
@@ -44,6 +49,8 @@ jobs:
           path: |
             screenshots/
             visual-review-manifest.json
+            document-vault-audit/
+            document-vault-audit.json
           if-no-files-found: warn
           retention-days: 7
 
@@ -51,9 +58,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add screenshots visual-review-manifest.json || true
+          git add screenshots visual-review-manifest.json document-vault-audit document-vault-audit.json || true
           if git diff --cached --quiet; then
-            echo "No screenshot changes to commit"
+            echo "No review changes to commit"
           else
             git commit -m "Update visual review screenshots"
             git push
