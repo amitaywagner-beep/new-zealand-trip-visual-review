@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-24T06:36:02.479Z",
-  "sourceSiteVersion": "34",
-  "captureCompletedAt": "2026-08-24T07:20:19.599Z",
+  "generatedAt": "2026-08-24T08:29:23.991Z",
+  "sourceSiteVersion": "35",
+  "captureCompletedAt": "2026-08-24T09:00:01.532Z",
   "mode": "screenshots",
   "captureEnvironment": "github-actions-playwright",
   "sourceManifestUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/manifest.json",
@@ -18,7 +18,7 @@
       "state": {
         "screen": "now"
       },
-      "capturedAt": "2026-08-24T07:15:18.614Z",
+      "capturedAt": "2026-08-24T08:55:14.437Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -39,7 +39,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "capturedAt": "2026-08-24T07:15:23.541Z",
+      "capturedAt": "2026-08-24T08:55:19.374Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -60,7 +60,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "capturedAt": "2026-08-24T07:15:30.960Z",
+      "capturedAt": "2026-08-24T08:55:25.799Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -81,7 +81,7 @@
         "screen": "route",
         "mapStyle": "map"
       },
-      "capturedAt": "2026-08-24T07:15:37.565Z",
+      "capturedAt": "2026-08-24T08:55:34.096Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -101,7 +101,7 @@
       "state": {
         "screen": "days"
       },
-      "capturedAt": "2026-08-24T07:15:42.885Z",
+      "capturedAt": "2026-08-24T08:55:39.417Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -121,7 +121,7 @@
       "state": {
         "screen": "bookings"
       },
-      "capturedAt": "2026-08-24T07:15:48.226Z",
+      "capturedAt": "2026-08-24T08:55:44.701Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -141,7 +141,7 @@
       "state": {
         "screen": "preparations"
       },
-      "capturedAt": "2026-08-24T07:15:53.185Z",
+      "capturedAt": "2026-08-24T08:55:49.597Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -163,7 +163,7 @@
         "mapStyle": "satellite",
         "anchor": ".atlas-route-controls"
       },
-      "capturedAt": "2026-08-24T07:15:59.081Z",
+      "capturedAt": "2026-08-24T08:55:55.076Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -187,7 +187,7 @@
         "focusStop": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-08-24T07:16:04.669Z",
+      "capturedAt": "2026-08-24T08:56:00.518Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -211,7 +211,7 @@
         "focusStop": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-08-24T07:16:10.303Z",
+      "capturedAt": "2026-08-24T08:56:06.042Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -235,7 +235,7 @@
         "focusStop": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-08-24T07:16:16.381Z",
+      "capturedAt": "2026-08-24T08:56:11.924Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -259,7 +259,7 @@
         "focusStop": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-08-24T07:16:22.091Z",
+      "capturedAt": "2026-08-24T08:56:17.957Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -282,7 +282,7 @@
         "selectedSegmentId": "road-segment-09",
         "anchor": "#road-segment-09"
       },
-      "capturedAt": "2026-08-24T07:16:28.517Z",
+      "capturedAt": "2026-08-24T08:56:23.180Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -306,13 +306,94 @@
         "focusSegment": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-08-24T07:16:34.465Z",
+      "capturedAt": "2026-08-24T08:56:30.779Z",
       "success": true,
       "error": null,
       "consoleSummary": {
         "consoleErrors": [],
         "pageErrors": [],
-        "failedRequests": []
+        "failedRequests": [
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/126",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/79/126",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/125",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/127",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/79/125",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/79/127",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/77/126",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/80/126",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/77/125",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/77/127",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/80/125",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/80/127",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/124",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/0",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/79/124",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/79/0",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/77/124",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/77/0",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/80/124",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/80/0",
+            "error": "net::ERR_ABORTED"
+          }
+        ]
       }
     },
     {
@@ -328,7 +409,7 @@
         "mapStyle": "satellite",
         "anchor": ".route-overview-graphic"
       },
-      "capturedAt": "2026-08-24T07:16:41.052Z",
+      "capturedAt": "2026-08-24T08:56:36.183Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -350,7 +431,7 @@
         "mapStyle": "satellite",
         "anchor": ".regional-atlas"
       },
-      "capturedAt": "2026-08-24T07:16:46.701Z",
+      "capturedAt": "2026-08-24T08:56:41.799Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -372,7 +453,7 @@
         "mapStyle": "satellite",
         "anchor": "[data-review-region='coromandel']"
       },
-      "capturedAt": "2026-08-24T07:16:52.773Z",
+      "capturedAt": "2026-08-24T08:56:47.086Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -394,7 +475,7 @@
         "mapStyle": "satellite",
         "anchor": "[data-review-region='rotorua-taupo']"
       },
-      "capturedAt": "2026-08-24T07:16:58.350Z",
+      "capturedAt": "2026-08-24T08:56:52.395Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -416,7 +497,7 @@
         "mapStyle": "satellite",
         "anchor": "[data-review-region='taranaki']"
       },
-      "capturedAt": "2026-08-24T07:17:03.789Z",
+      "capturedAt": "2026-08-24T08:56:57.754Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -438,7 +519,7 @@
         "mapStyle": "satellite",
         "anchor": "[data-review-region='tongariro']"
       },
-      "capturedAt": "2026-08-24T07:17:09.083Z",
+      "capturedAt": "2026-08-24T08:57:03.028Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -460,7 +541,7 @@
         "mapStyle": "satellite",
         "anchor": "[data-review-region='hawkes-bay']"
       },
-      "capturedAt": "2026-08-24T07:17:15.966Z",
+      "capturedAt": "2026-08-24T08:57:08.512Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -481,7 +562,7 @@
         "screen": "days",
         "openDayNumber": 1
       },
-      "capturedAt": "2026-08-24T07:17:20.953Z",
+      "capturedAt": "2026-08-24T08:57:13.450Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -502,7 +583,7 @@
         "screen": "days",
         "openDayNumber": 4
       },
-      "capturedAt": "2026-08-24T07:17:27.124Z",
+      "capturedAt": "2026-08-24T08:57:18.386Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -523,7 +604,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-08-24T07:17:32.259Z",
+      "capturedAt": "2026-08-24T08:57:23.352Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -544,7 +625,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-08-24T07:17:37.277Z",
+      "capturedAt": "2026-08-24T08:57:29.302Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -565,7 +646,7 @@
         "screen": "days",
         "openDayNumber": 5
       },
-      "capturedAt": "2026-08-24T07:17:42.460Z",
+      "capturedAt": "2026-08-24T08:57:34.317Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -586,7 +667,7 @@
         "screen": "days",
         "openDayNumber": 14
       },
-      "capturedAt": "2026-08-24T07:17:47.706Z",
+      "capturedAt": "2026-08-24T08:57:39.383Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -607,7 +688,7 @@
         "screen": "days",
         "openDayNumber": 18
       },
-      "capturedAt": "2026-08-24T07:17:52.634Z",
+      "capturedAt": "2026-08-24T08:57:44.297Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -629,7 +710,7 @@
         "openDayNumber": 4,
         "anchor": ".day-mini-map-card"
       },
-      "capturedAt": "2026-08-24T07:17:57.596Z",
+      "capturedAt": "2026-08-24T08:57:49.293Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -651,7 +732,7 @@
         "openDayNumber": 6,
         "anchor": ".day-mini-map-card"
       },
-      "capturedAt": "2026-08-24T07:18:02.598Z",
+      "capturedAt": "2026-08-24T08:57:54.209Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -673,7 +754,7 @@
         "hotelId": "manha",
         "anchor": "#hotel-review-manha"
       },
-      "capturedAt": "2026-08-24T07:18:07.535Z",
+      "capturedAt": "2026-08-24T08:57:58.964Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -695,7 +776,7 @@
         "hotelId": "devon",
         "anchor": "#hotel-review-devon"
       },
-      "capturedAt": "2026-08-24T07:18:12.285Z",
+      "capturedAt": "2026-08-24T08:58:03.714Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -718,7 +799,7 @@
         "openGroceries": true,
         "anchor": "#hotel-review-le-chalet"
       },
-      "capturedAt": "2026-08-24T07:18:17.431Z",
+      "capturedAt": "2026-08-24T08:58:08.577Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -741,7 +822,7 @@
         "returnDayNumber": 6,
         "anchor": "[data-booking-id='hobbiton']"
       },
-      "capturedAt": "2026-08-24T07:18:22.806Z",
+      "capturedAt": "2026-08-24T08:58:13.395Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -767,7 +848,7 @@
         "returnDayNumber": 6,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-08-24T07:18:32.299Z",
+      "capturedAt": "2026-08-24T08:58:19.142Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -787,7 +868,7 @@
       "state": {
         "screen": "now"
       },
-      "capturedAt": "2026-08-24T07:18:38.295Z",
+      "capturedAt": "2026-08-24T08:58:24.463Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -808,7 +889,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "capturedAt": "2026-08-24T07:18:43.556Z",
+      "capturedAt": "2026-08-24T08:58:31.065Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -829,7 +910,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "capturedAt": "2026-08-24T07:18:50.562Z",
+      "capturedAt": "2026-08-24T08:58:37.954Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -849,7 +930,7 @@
       "state": {
         "screen": "days"
       },
-      "capturedAt": "2026-08-24T07:18:56.117Z",
+      "capturedAt": "2026-08-24T08:58:43.593Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -870,7 +951,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-08-24T07:19:03.036Z",
+      "capturedAt": "2026-08-24T08:58:48.464Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -890,7 +971,7 @@
       "state": {
         "screen": "bookings"
       },
-      "capturedAt": "2026-08-24T07:19:12.183Z",
+      "capturedAt": "2026-08-24T08:58:54.057Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -910,7 +991,7 @@
       "state": {
         "screen": "preparations"
       },
-      "capturedAt": "2026-08-24T07:19:17.117Z",
+      "capturedAt": "2026-08-24T08:58:58.945Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -932,7 +1013,7 @@
         "mapStyle": "satellite",
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-08-24T07:19:23.412Z",
+      "capturedAt": "2026-08-24T08:59:04.650Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -956,7 +1037,7 @@
         "focusStop": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-08-24T07:19:30.423Z",
+      "capturedAt": "2026-08-24T08:59:10.576Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -980,7 +1061,7 @@
         "reviewWaypointId": "waitomo",
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-08-24T07:19:36.265Z",
+      "capturedAt": "2026-08-24T08:59:16.426Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1002,7 +1083,7 @@
         "mapStyle": "satellite",
         "anchor": ".route-overview-graphic"
       },
-      "capturedAt": "2026-08-24T07:19:41.868Z",
+      "capturedAt": "2026-08-24T08:59:22.094Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1023,7 +1104,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "capturedAt": "2026-08-24T07:19:47.987Z",
+      "capturedAt": "2026-08-24T08:59:30.356Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1044,7 +1125,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "capturedAt": "2026-08-24T07:19:54.140Z",
+      "capturedAt": "2026-08-24T08:59:36.480Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1065,7 +1146,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-08-24T07:19:59.084Z",
+      "capturedAt": "2026-08-24T08:59:41.346Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1086,7 +1167,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-08-24T07:20:04.075Z",
+      "capturedAt": "2026-08-24T08:59:46.238Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1107,7 +1188,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "capturedAt": "2026-08-24T07:20:09.310Z",
+      "capturedAt": "2026-08-24T08:59:51.368Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1128,7 +1209,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "capturedAt": "2026-08-24T07:20:14.486Z",
+      "capturedAt": "2026-08-24T08:59:56.432Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1149,7 +1230,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-08-24T07:20:19.560Z",
+      "capturedAt": "2026-08-24T09:00:01.502Z",
       "success": true,
       "error": null,
       "consoleSummary": {
