@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-08-24T17:14:35.674Z",
+  "baseUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site",
+  "environment": "github-actions-playwright-chromium",
+  "viewportMobile": "390x844",
+  "testDataOnly": true,
+  "results": [
+    {
+      "id": "configuration",
+      "success": false,
+      "error": "Required GitHub Actions secrets DOCUMENT_E2E_EMAIL and/or DOCUMENT_E2E_INVITE_CODE are unavailable."
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1
+  }
+}
