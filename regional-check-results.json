@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-08-24T10:31:37.109Z",
+  "environment": "github-actions-playwright-chromium",
+  "tests": [
+    {
+      "id": "desktop-regional-navigator",
+      "success": true,
+      "error": null,
+      "details": {
+        "headingVisible": true,
+        "visibleNames": {
+          "קורומנדל": true,
+          "רוטורואה וטאופו": true,
+          "טרנאקי": true,
+          "טונגרירו": true,
+          "מפרץ הוק": true
+        },
+        "oldStaticSignals": {
+          "largeImageCount": 0,
+          "attributionCount": 2
+        }
+      }
+    },
+    {
+      "id": "mobile-regional-navigator",
+      "success": true,
+      "error": null,
+      "details": {
+        "headingVisible": true,
+        "visibleNames": {
+          "קורומנדל": true,
+          "רוטורואה וטאופו": true,
+          "טרנאקי": true,
+          "טונגרירו": true,
+          "מפרץ הוק": true
+        },
+        "oldStaticSignals": {
+          "largeImageCount": 0,
+          "attributionCount": 2
+        }
+      }
+    },
+    {
+      "id": "region-taranaki-to-map-desktop",
+      "success": true,
+      "error": null,
+      "details": {
+        "beforeScrollY": 1609,
+        "afterScrollY": 282,
+        "mapVisible": true,
+        "selected": true,
+        "hasNewPlymouth": true,
+        "hasTaranaki": true,
+        "clickedText": "−"
+      }
+    },
+    {
+      "id": "region-taranaki-to-map-mobile",
+      "success": true,
+      "error": null,
+      "details": {
+        "beforeScrollY": 2604,
+        "afterScrollY": 389,
+        "mapVisible": true,
+        "selected": true,
+        "hasNewPlymouth": true,
+        "hasTaranaki": true,
+        "clickedText": ""
+      }
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0
+  }
+}
