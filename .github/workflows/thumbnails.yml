@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'screenshots/**'
+      - 'regional-mobile.png'
+      - 'regional-desktop.png'
       - '.github/workflows/thumbnails.yml'
   workflow_dispatch:
 
@@ -48,10 +50,9 @@ jobs:
           tiny = Path('tiny-previews')
           tiny.mkdir(exist_ok=True)
 
-          for name in names:
-              src = Path('screenshots') / f'{name}.png'
+          def make_previews(src, name):
               if not src.exists():
-                  continue
+                  return
               with Image.open(src) as im:
                   im = im.convert('RGB')
                   target_w = 240
@@ -71,6 +72,11 @@ jobs:
                   tiny_img = top.resize((tiny_w, tiny_h), Image.Resampling.LANCZOS)
                   tiny_img.save(tiny / f'{name}-top.jpg', 'JPEG', quality=20, optimize=True, progressive=False)
 
+          for name in names:
+              make_previews(Path('screenshots') / f'{name}.png', name)
+
+          make_previews(Path('regional-mobile.png'), 'regional-mobile')
+          make_previews(Path('regional-desktop.png'), 'regional-desktop')
           PY
 
       - name: Publish thumbnails
@@ -85,4 +91,4 @@ jobs:
             git push
           fi
 
-# Manual refresh trigger: 2026-08-24T12:02+03:00
+# Manual refresh trigger: 2026-08-24T13:32+03:00
