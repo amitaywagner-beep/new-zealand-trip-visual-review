@@ -84,3 +84,5 @@ jobs:
         if: always()
         run: |
           node -e "const r=require('./document-ci-e2e-results.json'); if(r.summary.failed) process.exit(1)"
+
+# rerun-marker: 2026-08-24T21:52+03:00
