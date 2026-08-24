@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - 'document-ci-e2e.mjs'
+      - 'document-ci-preauth.mjs'
       - '.github/workflows/document-ci-e2e.yml'
 
 permissions:
@@ -49,6 +50,10 @@ jobs:
           fi
           chmod 600 playwright-storage-state.json
           node -e "const fs=require('fs'); const x=JSON.parse(fs.readFileSync('playwright-storage-state.json','utf8')); if(!Array.isArray(x.cookies)||!Array.isArray(x.origins)) throw new Error('Invalid Playwright storage state'); console.log('Storage state JSON loaded; cookies:',x.cookies.length,'origins:',x.origins.length)"
+
+      - name: Complete ChatGPT SSO for isolated v39
+        run: node document-ci-preauth.mjs
+        continue-on-error: true
 
       - name: Run external document E2E
         run: node document-ci-e2e.mjs
