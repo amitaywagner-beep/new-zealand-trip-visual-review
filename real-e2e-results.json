@@ -1,0 +1,132 @@
+{
+  "generatedAt": "2026-08-24T09:06:04.779Z",
+  "environment": "github-actions-playwright-chromium",
+  "tests": [
+    {
+      "id": "mobile-now-390-layout",
+      "success": false,
+      "error": null,
+      "details": {
+        "dashboardBox": {
+          "x": 12,
+          "y": 133,
+          "width": 366,
+          "height": 1324.171875
+        },
+        "visibleHeroCandidates": [],
+        "hasDay": true,
+        "hasNext": true,
+        "legacyTitleVisible": true
+      }
+    },
+    {
+      "id": "mobile-now-360-layout",
+      "success": false,
+      "error": null,
+      "details": {
+        "dashboardBox": {
+          "x": 9,
+          "y": 133,
+          "width": 342,
+          "height": 1402.765625
+        },
+        "visibleHeroCandidates": [],
+        "hasDay": true,
+        "hasNext": true,
+        "legacyTitleVisible": true
+      }
+    },
+    {
+      "id": "real-day-to-booking-hobbiton",
+      "success": true,
+      "error": null,
+      "details": {
+        "clickedText": "פרטי ההזמנה",
+        "bookingVisible": true
+      }
+    },
+    {
+      "id": "real-booking-to-day-hobbiton",
+      "success": true,
+      "error": null,
+      "details": {
+        "clickedText": "חזרה ליום"
+      }
+    },
+    {
+      "id": "real-day-to-map-hobbiton",
+      "success": true,
+      "error": null,
+      "details": {
+        "clickedText": "במפה",
+        "mapVisible": true,
+        "htmlHasHobbiton": true
+      }
+    },
+    {
+      "id": "real-route-segment-01-to-map",
+      "success": true,
+      "error": null,
+      "details": {
+        "beforeScrollY": 3064,
+        "afterScrollY": 270,
+        "mapVisible": true,
+        "selectedMention": true
+      }
+    },
+    {
+      "id": "real-route-segment-05-to-map",
+      "success": true,
+      "error": null,
+      "details": {
+        "beforeScrollY": 3856,
+        "afterScrollY": 270,
+        "mapVisible": true,
+        "selectedMention": true
+      }
+    },
+    {
+      "id": "real-route-segment-09-to-map",
+      "success": true,
+      "error": null,
+      "details": {
+        "beforeScrollY": 4648,
+        "afterScrollY": 295,
+        "mapVisible": true,
+        "selectedMention": true
+      }
+    },
+    {
+      "id": "real-route-segment-13-to-map",
+      "success": true,
+      "error": null,
+      "details": {
+        "beforeScrollY": 5177,
+        "afterScrollY": 348,
+        "mapVisible": true,
+        "selectedMention": true
+      }
+    },
+    {
+      "id": "real-mobile-day-to-booking-hobbiton",
+      "success": true,
+      "error": null,
+      "details": {
+        "clickedText": "פרטי ההזמנה"
+      }
+    },
+    {
+      "id": "real-mobile-day-to-map-hobbiton",
+      "success": true,
+      "error": null,
+      "details": {
+        "clickedText": "במפה"
+      }
+    }
+  ],
+  "summary": {
+    "total": 11,
+    "passed": 9,
+    "failed": 2
+  }
+}
