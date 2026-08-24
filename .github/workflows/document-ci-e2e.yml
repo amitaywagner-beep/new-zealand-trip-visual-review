@@ -16,9 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      VISUAL_REVIEW_BASE_URL: https://amitai-new-zealand-trip.amitaywagner.chatgpt.site
+      VISUAL_REVIEW_BASE_URL: https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site
       DOCUMENT_E2E_EMAIL: ${{ secrets.DOCUMENT_E2E_EMAIL }}
       DOCUMENT_E2E_INVITE_CODE: ${{ secrets.DOCUMENT_E2E_INVITE_CODE }}
+      PLAYWRIGHT_STORAGE_STATE_B64: ${{ secrets.PLAYWRIGHT_STORAGE_STATE_B64 }}
+      PLAYWRIGHT_STORAGE_STATE_PATH: playwright-storage-state.json
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -34,11 +36,28 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
+      - name: Restore authenticated Playwright storage state
+        shell: bash
+        run: |
+          if [ -z "$PLAYWRIGHT_STORAGE_STATE_B64" ]; then
+            echo "PLAYWRIGHT_STORAGE_STATE_B64 is missing"
+            printf '%s\n' '{"cookies":[],"origins":[]}' > playwright-storage-state.json
+          else
+            printf '%s' "$PLAYWRIGHT_STORAGE_STATE_B64" | base64 --decode > playwright-storage-state.json
+          fi
+          chmod 600 playwright-storage-state.json
+          node -e "const fs=require('fs'); const x=JSON.parse(fs.readFileSync('playwright-storage-state.json','utf8')); if(!Array.isArray(x.cookies)||!Array.isArray(x.origins)) throw new Error('Invalid Playwright storage state'); console.log('Storage state JSON loaded; cookies:',x.cookies.length,'origins:',x.origins.length)"
+
       - name: Run external document E2E
         run: node document-ci-e2e.mjs
         continue-on-error: true
 
+      - name: Remove sensitive storage state
+        if: always()
+        run: rm -f playwright-storage-state.json
+
       - name: Upload E2E artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: document-ci-e2e-artifacts
@@ -49,6 +68,7 @@ jobs:
           retention-days: 7
 
       - name: Publish sanitized results
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -61,5 +81,6 @@ jobs:
           fi
 
       - name: Enforce result
+        if: always()
         run: |
           node -e "const r=require('./document-ci-e2e-results.json'); if(r.summary.failed) process.exit(1)"
