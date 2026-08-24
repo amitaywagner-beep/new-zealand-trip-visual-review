@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-08-24T13:07:35.799Z",
+  "tests": [
+    {
+      "id": "mobile-overview-structure",
+      "success": true,
+      "details": {
+        "height": 207,
+        "width": 366,
+        "buttons": [
+          "כל המסלול",
+          "01\nאוקלנד\nAuckland\nימים 1–2",
+          "02\nויטיאנגה\nWhitianga\nימים 3–4",
+          "03\nטאורנגה\nTauranga\nיום 5",
+          "04\nרוטורואה\nRotorua\nימים 6–8",
+          "05\nטאופו\nTaupo\nימים 9–10",
+          "06\nניו פלימות'\nNew Plymouth\nימים 11–12",
+          "07\nטונגרירו\nTongariro\nימים 13–14",
+          "08\nנייפייר\nNapier\nימים 15–16",
+          "09\nפלמרסטון נורת'\nPalmerston North\nימים 17–20\nמשפחה וחתונה",
+          "10\nוולינגטון\nWellington\nימים 21–22"
+        ],
+        "maps": 0,
+        "images": 0,
+        "attributions": 0,
+        "scrollWidth": 364,
+        "clientWidth": 364,
+        "scrollHeight": 205,
+        "clientHeight": 205,
+        "text": "המסע במבט אחד\nכל המסלול\n01\nאוקלנד\nAuckland\nימים 1–2\n02\nויטיאנגה\nWhitianga\nימים 3–4\n03\nטאורנגה\nTauranga\nיום 5\n04\nרוטורואה\nRotorua\nימים 6–8\n05\nטאופו\nTaupo\nימים 9–10\n06\nניו פלימות'\nNew Plymouth\nימים 11–12\n07\nטונגרירו\nTongariro\nימים 13–14\n08\nנייפייר\nNapier\nימים 15–16\n09\nפלמרסטון נורת'\nPalmerston North\nימים 17–20\nמשפחה וחתונה\n10\nוולינגטון\nWellington\nימים 21–22"
+      }
+    },
+    {
+      "id": "mobile-overview-stop-06-clicks-map",
+      "success": true,
+      "details": {
+        "before": 1714,
+        "after": 321,
+        "mapVisible": true,
+        "hasNewPlymouth": true
+      }
+    },
+    {
+      "id": "desktop-overview-palmerston-clicks-map",
+      "success": true,
+      "details": {
+        "mapVisible": true,
+        "hasFamily": true
+      }
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0
+  }
+}
