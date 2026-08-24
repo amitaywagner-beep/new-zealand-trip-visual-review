@@ -47,3 +47,5 @@ jobs:
             git commit -m "Update site review metadata"
             git push
           fi
+
+# Manual refresh: document vault audit 2026-08-24T17:35+03:00
