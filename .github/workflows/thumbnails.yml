@@ -33,6 +33,8 @@ jobs:
               'trip-at-a-glance',
               'regional-windows',
               'mobile-route',
+              'mobile-route-all',
+              'mobile-trip-at-a-glance',
               'route-segment-09-map',
               'route-segment-09-card',
               'station-napier',
