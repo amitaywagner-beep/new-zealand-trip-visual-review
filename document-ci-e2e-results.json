@@ -1,14 +1,15 @@
 {
-  "generatedAt": "2026-08-24T17:14:35.674Z",
-  "baseUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site",
+  "generatedAt": "2026-08-24T18:53:08.893Z",
+  "baseUrl": "https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site",
   "environment": "github-actions-playwright-chromium",
   "viewportMobile": "390x844",
   "testDataOnly": true,
+  "storageStateUsed": true,
   "results": [
     {
       "id": "configuration",
       "success": false,
-      "error": "Required GitHub Actions secrets DOCUMENT_E2E_EMAIL and/or DOCUMENT_E2E_INVITE_CODE are unavailable."
+      "error": "Required GitHub Actions secrets DOCUMENT_E2E_EMAIL, DOCUMENT_E2E_INVITE_CODE and/or PLAYWRIGHT_STORAGE_STATE_B64 are unavailable."
     }
   ],
   "summary": {
