@@ -84,3 +84,5 @@ jobs:
             git commit -m "Update visual review thumbnails"
             git push
           fi
+
+# Manual refresh trigger: 2026-08-24T12:02+03:00
