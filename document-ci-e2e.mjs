@@ -2,9 +2,10 @@ import { chromium } from 'playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-const BASE = process.env.VISUAL_REVIEW_BASE_URL || 'https://amitai-new-zealand-trip.amitaywagner.chatgpt.site';
+const BASE = process.env.VISUAL_REVIEW_BASE_URL || 'https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site';
 const EMAIL = process.env.DOCUMENT_E2E_EMAIL || '';
 const INVITE = process.env.DOCUMENT_E2E_INVITE_CODE || '';
+const STORAGE_STATE_PATH = process.env.PLAYWRIGHT_STORAGE_STATE_PATH || '';
 const outDir = path.resolve('document-ci-e2e-artifacts');
 await fs.mkdir(outDir, { recursive: true });
 
@@ -20,10 +21,15 @@ await fs.writeFile(pdfPath, pdf, 'binary');
 const results = [];
 let browser;
 
+function escapeRegex(s) {
+  return String(s || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function safeText(s, max = 900) {
-  return String(s ?? '').replace(new RegExp(EMAIL.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), '[email]')
-    .replace(new RegExp(INVITE.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), '[invite]')
-    .slice(0, max);
+  let out = String(s ?? '');
+  if (EMAIL) out = out.replace(new RegExp(escapeRegex(EMAIL), 'gi'), '[email]');
+  if (INVITE) out = out.replace(new RegExp(escapeRegex(INVITE), 'g'), '[invite]');
+  return out.slice(0, max);
 }
 
 async function record(id, fn) {
@@ -48,7 +54,6 @@ async function controlInventory(page) {
     type: el.getAttribute('type'),
     name: el.getAttribute('name'),
     text: (el.innerText || el.getAttribute('aria-label') || el.getAttribute('placeholder') || '').trim().slice(0, 100),
-    value: el.tagName === 'SELECT' ? undefined : undefined,
   })));
 }
 
@@ -75,12 +80,16 @@ async function clickFirst(page, patterns) {
 
 async function authenticate(page) {
   await page.goto(`${BASE}/#bookings`, { waitUntil: 'domcontentloaded', timeout: 60000 });
-  await page.waitForTimeout(1200);
-  if (await page.locator('.documents-hub').count() && await page.getByRole('button', { name: /העלאת מסמך/i }).count()) return { alreadyAuthenticated: true };
+  await page.waitForTimeout(1500);
 
-  // Some builds expose the auth form immediately; others behind an access/login button.
+  // A valid ChatGPT storage state may already be sufficient to expose the vault.
+  if (await page.locator('.documents-hub').count() && await page.getByRole('button', { name: /העלאת מסמך/i }).count()) {
+    return { chatgptSessionAccepted: true, inviteRequired: false };
+  }
+
+  // If the isolated v39 build still asks for the site invite, enter only the fields it actually exposes.
   await clickFirst(page, [/כניסה/i, /התחברות/i, /גישה/i, /כספת/i, /אימות/i]).catch(() => false);
-  await page.waitForTimeout(500);
+  await page.waitForTimeout(600);
 
   const emailFilled = await fillFirst(page, [
     'input[name="email"]', 'input[type="email"]', 'input[autocomplete="email"]', 'input[placeholder*="מייל"]', 'input[placeholder*="email" i]'
@@ -89,25 +98,29 @@ async function authenticate(page) {
     'input[name="inviteCode"]', 'input[name="invite_code"]', 'input[name*="invite" i]', 'input[name*="code" i]', 'input[placeholder*="קוד"]', 'input[placeholder*="code" i]'
   ], INVITE);
 
-  if (!emailFilled || !inviteFilled) {
-    await screenshot(page, 'auth-fields-not-found');
-    throw new Error(`Authentication fields not found. emailFilled=${emailFilled} inviteFilled=${inviteFilled}; controls=${JSON.stringify(await controlInventory(page))}`);
+  // When ChatGPT auth identifies the account, an email field may intentionally not exist.
+  if (!inviteFilled && !(await page.locator('.documents-hub').count())) {
+    await screenshot(page, 'invite-field-not-found');
+    throw new Error(`Invite field not found after loading authenticated ChatGPT storage state. emailFieldPresent=${emailFilled}; controls=${JSON.stringify(await controlInventory(page))}`);
   }
 
-  const submitted = await clickFirst(page, [/כניסה/i, /המשך/i, /אימות/i, /פתיחת/i, /גישה/i, /התחבר/i]);
-  if (!submitted) {
-    const form = page.locator('form').filter({ has: page.locator('input[type="email"],input[name="email"]') }).first();
-    if (await form.count()) await form.evaluate(f => f.requestSubmit()); else throw new Error('Could not submit authentication form');
+  if (inviteFilled) {
+    const submitted = await clickFirst(page, [/כניסה/i, /המשך/i, /אימות/i, /פתיחת/i, /גישה/i, /התחבר/i]);
+    if (!submitted) {
+      const inviteInput = page.locator('input[name="inviteCode"],input[name="invite_code"],input[name*="invite" i],input[name*="code" i]').first();
+      const form = page.locator('form').filter({ has: inviteInput }).first();
+      if (await form.count()) await form.evaluate(f => f.requestSubmit()); else throw new Error('Could not submit invite form');
+    }
   }
 
-  await page.waitForTimeout(1200);
+  await page.waitForTimeout(1500);
   await page.goto(`${BASE}/#bookings`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await page.waitForTimeout(1200);
-  if (!await page.locator('.documents-hub').count()) {
+  if (!await page.locator('.documents-hub').count() || !await page.getByRole('button', { name: /העלאת מסמך/i }).count()) {
     await screenshot(page, 'auth-failed');
-    throw new Error(`Authentication did not reach documents hub; controls=${JSON.stringify(await controlInventory(page))}`);
+    throw new Error(`Authenticated ChatGPT session + invite did not reach documents hub; controls=${JSON.stringify(await controlInventory(page))}`);
   }
-  return { alreadyAuthenticated: false };
+  return { chatgptSessionAccepted: true, inviteRequired: inviteFilled, emailFieldPresent: emailFilled };
 }
 
 async function openUpload(page) {
@@ -125,7 +138,6 @@ async function chooseAssociation(form, type, values) {
   const wanted = Array.isArray(values) ? values : [values];
   const typeRegex = type === 'day' ? /day|יום/i : type === 'booking' ? /booking|הזמנה/i : /poi|נקוד|אתר|אטרק/i;
 
-  // Native select(s).
   for (const sel of await form.locator('select').all()) {
     const name = `${await sel.getAttribute('name') || ''} ${await sel.getAttribute('aria-label') || ''}`;
     if (!typeRegex.test(name)) continue;
@@ -136,7 +148,6 @@ async function chooseAssociation(form, type, values) {
     }
   }
 
-  // Inputs by explicit names, text fields, checkboxes/radios.
   const inputs = await form.locator('input').all();
   for (const input of inputs) {
     const name = `${await input.getAttribute('name') || ''} ${await input.getAttribute('aria-label') || ''}`;
@@ -153,7 +164,6 @@ async function chooseAssociation(form, type, values) {
     }
   }
 
-  // Custom combobox/button UI: click a control labelled by association type, then choose option.
   const candidates = form.getByRole('button', { name: typeRegex });
   if (await candidates.count()) {
     await candidates.first().click();
@@ -190,7 +200,6 @@ async function submitUpload(page, displayName, { requireAssociations }) {
     }
   }
 
-  // Category is optional for this test; choose attraction if the field exists.
   const category = form.locator('select[name="category"]').first();
   if (await category.count()) {
     const options = await category.locator('option').evaluateAll(os => os.map(o => ({ value:o.value,text:o.textContent||'' })));
@@ -230,7 +239,6 @@ async function verifyBooking(page, displayName, expectedId) {
 }
 
 async function verifyDay(page, displayName, expectedId) {
-  // Navigate via existing Days UI rather than assuming an undocumented direct route.
   const daysNav = page.getByRole('button', { name: /^ימים$/ }).first();
   if (await daysNav.count()) await daysNav.click(); else {
     const daysLink = page.getByText(/^ימים$/).first(); if (await daysLink.count()) await daysLink.click(); else await page.goto(`${BASE}/#days`);
@@ -266,7 +274,6 @@ async function openDocument(page, displayName) {
   if (popup) { await popup.waitForLoadState('domcontentloaded', { timeout:10000 }).catch(()=>{}); await popup.close().catch(()=>{}); return { method:'popup' }; }
   if (response) return { method:'response', status:response.status() };
   await page.waitForTimeout(700);
-  // A built-in modal/object/embed viewer is also acceptable.
   if (await page.locator('iframe,embed,object,[role="dialog"]').count()) return { method:'inline-viewer' };
   throw new Error('Document open action produced no observable viewer/response');
 }
@@ -291,66 +298,73 @@ async function deleteDocument(page, displayName) {
   return { deleted:true };
 }
 
-if (!EMAIL || !INVITE) {
-  results.push({ id:'configuration', success:false, error:'Required GitHub Actions secrets DOCUMENT_E2E_EMAIL and/or DOCUMENT_E2E_INVITE_CODE are unavailable.' });
+if (!EMAIL || !INVITE || !STORAGE_STATE_PATH) {
+  results.push({ id:'configuration', success:false, error:'Required GitHub Actions secrets DOCUMENT_E2E_EMAIL, DOCUMENT_E2E_INVITE_CODE and/or PLAYWRIGHT_STORAGE_STATE_B64 are unavailable.' });
 } else {
   browser = await chromium.launch({ headless:true });
-  const authContext = await browser.newContext({ viewport:{width:1440,height:1000} });
-  const authPage = await authContext.newPage();
+  let authContext;
+  try {
+    authContext = await browser.newContext({ viewport:{width:1440,height:1000}, storageState: STORAGE_STATE_PATH });
+  } catch (e) {
+    results.push({ id:'configuration', success:false, error:`Could not load Playwright storage state: ${safeText(e?.message || e)}` });
+  }
 
-  await record('authentication', async () => await authenticate(authPage));
-  const authOkay = results.at(-1)?.success;
-  let storageState;
-  if (authOkay) storageState = await authContext.storageState();
-  await authContext.close();
+  if (authContext) {
+    const authPage = await authContext.newPage();
+    await record('authentication', async () => await authenticate(authPage));
+    const authOkay = results.at(-1)?.success;
+    let storageState;
+    if (authOkay) storageState = await authContext.storageState();
+    await authContext.close();
 
-  if (authOkay) {
-    await record('association-rendering', async () => {
-      const ctx = await browser.newContext({ viewport:{width:1440,height:1000}, storageState });
-      const page = await ctx.newPage();
-      await page.goto(`${BASE}/#bookings`, { waitUntil:'domcontentloaded', timeout:60000 }); await page.waitForTimeout(700);
-      let documentId;
-      try {
-        ({ documentId } = await submitUpload(page, testAName, { requireAssociations:true }));
-        const hubId = await verifyHub(page, testAName, documentId);
-        const bookingId = await verifyBooking(page, testAName, documentId);
-        const dayId = await verifyDay(page, testAName, documentId);
-        await screenshot(page, 'association-rendering-pass');
-        return { documentId, idsConsistent:new Set([hubId,bookingId,dayId]).size===1, hub:true, booking:true, day:true };
-      } finally {
-        if (documentId) await deleteDocument(page, testAName).catch(async e => { await fs.writeFile(path.join(outDir,'association-cleanup-error.txt'), safeText(e?.stack||e)); });
-        await ctx.close();
-      }
-    });
+    if (authOkay) {
+      await record('association-rendering', async () => {
+        const ctx = await browser.newContext({ viewport:{width:1440,height:1000}, storageState });
+        const page = await ctx.newPage();
+        await page.goto(`${BASE}/#bookings`, { waitUntil:'domcontentloaded', timeout:60000 }); await page.waitForTimeout(700);
+        let documentId;
+        try {
+          ({ documentId } = await submitUpload(page, testAName, { requireAssociations:true }));
+          const hubId = await verifyHub(page, testAName, documentId);
+          const bookingId = await verifyBooking(page, testAName, documentId);
+          const dayId = await verifyDay(page, testAName, documentId);
+          await screenshot(page, 'association-rendering-pass');
+          return { documentId, idsConsistent:new Set([hubId,bookingId,dayId]).size===1, hub:true, booking:true, day:true };
+        } finally {
+          if (documentId) await deleteDocument(page, testAName).catch(async e => { await fs.writeFile(path.join(outDir,'association-cleanup-error.txt'), safeText(e?.stack||e)); });
+          await ctx.close();
+        }
+      });
 
-    await record('mobile-real-upload-390x844', async () => {
-      const ctx = await browser.newContext({ viewport:{width:390,height:844}, hasTouch:true, storageState });
-      const page = await ctx.newPage();
-      await page.goto(`${BASE}/#bookings`, { waitUntil:'domcontentloaded', timeout:60000 }); await page.waitForTimeout(700);
-      let documentId;
-      try {
-        ({ documentId } = await submitUpload(page, testBName, { requireAssociations:false }));
-        await page.reload({ waitUntil:'domcontentloaded' }); await page.waitForTimeout(800);
-        const row = page.locator('.documents-hub .document-row[data-document-id]').filter({ hasText:testBName }).first();
-        await row.waitFor({ state:'visible', timeout:15000 });
-        const persistedId = await row.getAttribute('data-document-id');
-        if (persistedId !== documentId) throw new Error(`Mobile persistence id mismatch: ${persistedId} != ${documentId}`);
-        const open = await openDocument(page, testBName);
-        await screenshot(page, 'mobile-upload-pass');
-        await deleteDocument(page, testBName);
-        return { viewport:'390x844', touch:true, documentId, persisted:true, opened:open, deleted:true };
-      } finally {
-        if (documentId) await deleteDocument(page, testBName).catch(async e => { await fs.writeFile(path.join(outDir,'mobile-cleanup-error.txt'), safeText(e?.stack||e)); });
-        await ctx.close();
-      }
-    });
+      await record('mobile-real-upload-390x844', async () => {
+        const ctx = await browser.newContext({ viewport:{width:390,height:844}, hasTouch:true, storageState });
+        const page = await ctx.newPage();
+        await page.goto(`${BASE}/#bookings`, { waitUntil:'domcontentloaded', timeout:60000 }); await page.waitForTimeout(700);
+        let documentId;
+        try {
+          ({ documentId } = await submitUpload(page, testBName, { requireAssociations:false }));
+          await page.reload({ waitUntil:'domcontentloaded' }); await page.waitForTimeout(800);
+          const row = page.locator('.documents-hub .document-row[data-document-id]').filter({ hasText:testBName }).first();
+          await row.waitFor({ state:'visible', timeout:15000 });
+          const persistedId = await row.getAttribute('data-document-id');
+          if (persistedId !== documentId) throw new Error(`Mobile persistence id mismatch: ${persistedId} != ${documentId}`);
+          const open = await openDocument(page, testBName);
+          await screenshot(page, 'mobile-upload-pass');
+          await deleteDocument(page, testBName);
+          return { viewport:'390x844', touch:true, documentId, persisted:true, opened:open, deleted:true };
+        } finally {
+          if (documentId) await deleteDocument(page, testBName).catch(async e => { await fs.writeFile(path.join(outDir,'mobile-cleanup-error.txt'), safeText(e?.stack||e)); });
+          await ctx.close();
+        }
+      });
+    }
   }
 
   await browser.close();
 }
 
 const summary = { total:results.length, passed:results.filter(x=>x.success).length, failed:results.filter(x=>!x.success).length };
-const output = { generatedAt:new Date().toISOString(), baseUrl:BASE, environment:'github-actions-playwright-chromium', viewportMobile:'390x844', testDataOnly:true, results, summary };
+const output = { generatedAt:new Date().toISOString(), baseUrl:BASE, environment:'github-actions-playwright-chromium', viewportMobile:'390x844', testDataOnly:true, storageStateUsed:Boolean(STORAGE_STATE_PATH), results, summary };
 await fs.writeFile('document-ci-e2e-results.json', JSON.stringify(output,null,2));
 console.log(JSON.stringify(summary));
 if (summary.failed) process.exitCode = 1;
