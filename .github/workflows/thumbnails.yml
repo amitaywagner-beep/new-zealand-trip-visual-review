@@ -28,16 +28,17 @@ jobs:
           from PIL import Image
 
           names = [
-              'desktop-route-satellite',
+              'now-trip-day-06',
+              'desktop-wide-now-trip-day-06',
+              'mobile-now-trip-day-06',
+              'mobile-360-now-trip-day-06',
+              'day-06-open',
+              'mobile-day-06-command',
+              'mobile-430-day-06-command',
+              'day-no-breakfast-open',
+              'booking-from-day-hobbiton',
+              'day-to-map-hobbiton',
               'desktop-route-main-map',
-              'trip-at-a-glance',
-              'regional-windows',
-              'mobile-route',
-              'mobile-route-all',
-              'mobile-trip-at-a-glance',
-              'route-segment-09-map',
-              'route-segment-09-card',
-              'station-napier',
               'desktop-days',
           ]
           out = Path('thumbnails')
@@ -48,10 +49,10 @@ jobs:
                   continue
               with Image.open(src) as im:
                   im = im.convert('RGB')
-                  target_w = 90
+                  target_w = 240
                   target_h = max(1, round(im.height * target_w / im.width))
                   im = im.resize((target_w, target_h), Image.Resampling.LANCZOS)
-                  im.save(out / f'{name}.jpg', 'JPEG', quality=15, optimize=True, progressive=False)
+                  im.save(out / f'{name}.jpg', 'JPEG', quality=35, optimize=True, progressive=False)
           PY
 
       - name: Publish thumbnails
