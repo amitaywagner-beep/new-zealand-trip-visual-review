@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T18:53:08.893Z",
+  "generatedAt": "2026-08-24T19:14:03.421Z",
   "baseUrl": "https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site",
   "environment": "github-actions-playwright-chromium",
   "viewportMobile": "390x844",
@@ -7,9 +7,11 @@
   "storageStateUsed": true,
   "results": [
     {
-      "id": "configuration",
+      "id": "authentication",
       "success": false,
-      "error": "Required GitHub Actions secrets DOCUMENT_E2E_EMAIL, DOCUMENT_E2E_INVITE_CODE and/or PLAYWRIGHT_STORAGE_STATE_B64 are unavailable."
+      "startedAt": "2026-08-24T19:14:00.242Z",
+      "finishedAt": "2026-08-24T19:14:03.385Z",
+      "error": "Error: Invite field not found after loading authenticated ChatGPT storage state. emailFieldPresent=false; controls=[{\"tag\":\"A\",\"type\":null,\"name\":null,\"text\":\"Continue with ChatGPT\"},{\"tag\":\"A\",\"type\":null,\"name\":null,\"text\":\"Privacy Policy\"}]\n    at authenticate (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:104:11)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:314:48\n    at async record (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:314:5"
     }
   ],
   "summary": {
