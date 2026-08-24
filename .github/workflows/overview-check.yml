@@ -1,0 +1,33 @@
+name: Overview Navigator Check
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'overview-check.mjs'
+      - '.github/workflows/overview-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: node overview-check.mjs
+      - name: Publish focused results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add overview-check overview-check-results.json || true
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update overview navigator check"
+            git push
+          fi
