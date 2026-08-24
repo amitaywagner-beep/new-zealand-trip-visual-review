@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'screenshots/**'
+      - 'overview-check/**'
       - 'regional-mobile.png'
       - 'regional-desktop.png'
       - '.github/workflows/thumbnails.yml'
@@ -43,6 +44,17 @@ jobs:
               'desktop-route-main-map',
               'desktop-days',
           ]
+          overview_names = [
+              'trip-at-a-glance',
+              'overview-stop-auckland-selected',
+              'overview-stop-palmerston-selected',
+              'mobile-trip-overview',
+              'mobile-overview-stop-06-selected',
+              'regional-selector',
+              'mobile-regional-selector',
+              'region-taranaki-map',
+              'mobile-region-taranaki-map',
+          ]
           out = Path('thumbnails')
           out.mkdir(exist_ok=True)
           previews = Path('previews')
@@ -74,6 +86,8 @@ jobs:
 
           for name in names:
               make_previews(Path('screenshots') / f'{name}.png', name)
+          for name in overview_names:
+              make_previews(Path('overview-check') / f'{name}.png', name)
 
           make_previews(Path('regional-mobile.png'), 'regional-mobile')
           make_previews(Path('regional-desktop.png'), 'regional-desktop')
@@ -91,4 +105,4 @@ jobs:
             git push
           fi
 
-# Manual refresh trigger: 2026-08-24T13:32+03:00
+# Manual refresh trigger: 2026-08-24T16:05+03:00
