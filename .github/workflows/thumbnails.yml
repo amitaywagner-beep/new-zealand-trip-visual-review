@@ -46,10 +46,10 @@ jobs:
                   continue
               with Image.open(src) as im:
                   im = im.convert('RGB')
-                  target_w = 360
+                  target_w = 160
                   target_h = max(1, round(im.height * target_w / im.width))
                   im = im.resize((target_w, target_h), Image.Resampling.LANCZOS)
-                  im.save(out / f'{name}.jpg', 'JPEG', quality=42, optimize=True, progressive=True)
+                  im.save(out / f'{name}.jpg', 'JPEG', quality=25, optimize=True, progressive=False)
           PY
 
       - name: Publish thumbnails
