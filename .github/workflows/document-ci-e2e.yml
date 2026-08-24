@@ -1,0 +1,65 @@
+name: Document Vault Chromium E2E
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'document-ci-e2e.mjs'
+      - '.github/workflows/document-ci-e2e.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  document-e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      VISUAL_REVIEW_BASE_URL: https://amitai-new-zealand-trip.amitaywagner.chatgpt.site
+      DOCUMENT_E2E_EMAIL: ${{ secrets.DOCUMENT_E2E_EMAIL }}
+      DOCUMENT_E2E_INVITE_CODE: ${{ secrets.DOCUMENT_E2E_INVITE_CODE }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run external document E2E
+        run: node document-ci-e2e.mjs
+        continue-on-error: true
+
+      - name: Upload E2E artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: document-ci-e2e-artifacts
+          path: |
+            document-ci-e2e-results.json
+            document-ci-e2e-artifacts/
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Publish sanitized results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add document-ci-e2e-results.json || true
+          if git diff --cached --quiet; then
+            echo "No result changes"
+          else
+            git commit -m "Update document Chromium E2E results"
+            git push
+          fi
+
+      - name: Enforce result
+        run: |
+          node -e "const r=require('./document-ci-e2e-results.json'); if(r.summary.failed) process.exit(1)"
