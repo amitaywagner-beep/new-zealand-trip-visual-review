@@ -43,6 +43,9 @@ jobs:
           ]
           out = Path('thumbnails')
           out.mkdir(exist_ok=True)
+          previews = Path('previews')
+          previews.mkdir(exist_ok=True)
+
           for name in names:
               src = Path('screenshots') / f'{name}.png'
               if not src.exists():
@@ -51,15 +54,23 @@ jobs:
                   im = im.convert('RGB')
                   target_w = 240
                   target_h = max(1, round(im.height * target_w / im.width))
-                  im = im.resize((target_w, target_h), Image.Resampling.LANCZOS)
-                  im.save(out / f'{name}.jpg', 'JPEG', quality=35, optimize=True, progressive=False)
+                  thumb = im.resize((target_w, target_h), Image.Resampling.LANCZOS)
+                  thumb.save(out / f'{name}.jpg', 'JPEG', quality=35, optimize=True, progressive=False)
+
+                  crop_h = min(im.height, 1000 if im.width >= 700 else 900)
+                  top = im.crop((0, 0, im.width, crop_h))
+                  preview_w = 300
+                  preview_h = max(1, round(top.height * preview_w / top.width))
+                  top = top.resize((preview_w, preview_h), Image.Resampling.LANCZOS)
+                  top.save(previews / f'{name}-top.jpg', 'JPEG', quality=45, optimize=True, progressive=False)
+
           PY
 
       - name: Publish thumbnails
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add thumbnails || true
+          git add thumbnails previews || true
           if git diff --cached --quiet; then
             echo "No thumbnail changes to commit"
           else
