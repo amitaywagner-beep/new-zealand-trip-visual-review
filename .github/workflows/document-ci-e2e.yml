@@ -43,7 +43,9 @@ jobs:
             echo "PLAYWRIGHT_STORAGE_STATE_B64 is missing"
             printf '%s\n' '{"cookies":[],"origins":[]}' > playwright-storage-state.json
           else
-            printf '%s' "$PLAYWRIGHT_STORAGE_STATE_B64" | base64 --decode > playwright-storage-state.json
+            printf '%s' "$PLAYWRIGHT_STORAGE_STATE_B64" | base64 --decode > playwright-storage-state.json.gz
+            gzip -dc playwright-storage-state.json.gz > playwright-storage-state.json
+            rm -f playwright-storage-state.json.gz
           fi
           chmod 600 playwright-storage-state.json
           node -e "const fs=require('fs'); const x=JSON.parse(fs.readFileSync('playwright-storage-state.json','utf8')); if(!Array.isArray(x.cookies)||!Array.isArray(x.origins)) throw new Error('Invalid Playwright storage state'); console.log('Storage state JSON loaded; cookies:',x.cookies.length,'origins:',x.origins.length)"
@@ -54,7 +56,7 @@ jobs:
 
       - name: Remove sensitive storage state
         if: always()
-        run: rm -f playwright-storage-state.json
+        run: rm -f playwright-storage-state.json playwright-storage-state.json.gz
 
       - name: Upload E2E artifacts
         if: always()
@@ -71,7 +73,7 @@ jobs:
         if: always()
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898218+github-actions[bot]@users.noreply.github.com"
           git add document-ci-e2e-results.json || true
           if git diff --cached --quiet; then
             echo "No result changes"
@@ -84,5 +86,3 @@ jobs:
         if: always()
         run: |
           node -e "const r=require('./document-ci-e2e-results.json'); if(r.summary.failed) process.exit(1)"
-
-# rerun-marker: 2026-08-24T21:52+03:00
