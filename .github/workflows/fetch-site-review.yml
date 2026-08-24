@@ -1,0 +1,49 @@
+name: Fetch Site Review Metadata
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fetch-site-review.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch site review metadata
+        run: |
+          node <<'NODE'
+          const base = 'https://amitai-new-zealand-trip.amitaywagner.chatgpt.site';
+          for (const [url, file] of [
+            [`${base}/visual-review/manifest.json`, 'source-site-manifest.json'],
+            [`${base}/visual-review/e2e-results.json`, 'site-e2e-results.json'],
+          ]) {
+            try {
+              const r = await fetch(url, { cache: 'no-store' });
+              const text = await r.text();
+              await import('node:fs/promises').then(fs => fs.writeFile(file, text, 'utf8'));
+              console.log(url, r.status, text.slice(0, 200));
+            } catch (e) {
+              await import('node:fs/promises').then(fs => fs.writeFile(file, JSON.stringify({fetchError:String(e)}, null, 2), 'utf8'));
+            }
+          }
+          NODE
+
+      - name: Publish metadata
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add source-site-manifest.json site-e2e-results.json || true
+          if git diff --cached --quiet; then
+            echo "No metadata changes"
+          else
+            git commit -m "Update site review metadata"
+            git push
+          fi
