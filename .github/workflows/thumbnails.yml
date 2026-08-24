@@ -45,6 +45,8 @@ jobs:
           out.mkdir(exist_ok=True)
           previews = Path('previews')
           previews.mkdir(exist_ok=True)
+          tiny = Path('tiny-previews')
+          tiny.mkdir(exist_ok=True)
 
           for name in names:
               src = Path('screenshots') / f'{name}.png'
@@ -61,8 +63,13 @@ jobs:
                   top = im.crop((0, 0, im.width, crop_h))
                   preview_w = 300
                   preview_h = max(1, round(top.height * preview_w / top.width))
-                  top = top.resize((preview_w, preview_h), Image.Resampling.LANCZOS)
-                  top.save(previews / f'{name}-top.jpg', 'JPEG', quality=45, optimize=True, progressive=False)
+                  preview = top.resize((preview_w, preview_h), Image.Resampling.LANCZOS)
+                  preview.save(previews / f'{name}-top.jpg', 'JPEG', quality=45, optimize=True, progressive=False)
+
+                  tiny_w = 120
+                  tiny_h = max(1, round(top.height * tiny_w / top.width))
+                  tiny_img = top.resize((tiny_w, tiny_h), Image.Resampling.LANCZOS)
+                  tiny_img.save(tiny / f'{name}-top.jpg', 'JPEG', quality=20, optimize=True, progressive=False)
 
           PY
 
@@ -70,7 +77,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add thumbnails previews || true
+          git add thumbnails previews tiny-previews || true
           if git diff --cached --quiet; then
             echo "No thumbnail changes to commit"
           else
