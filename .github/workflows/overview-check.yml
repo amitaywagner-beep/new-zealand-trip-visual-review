@@ -1,9 +1,9 @@
-name: Overview Navigator Check
+name: Focused Document Vault Check
 on:
   push:
     branches: [main]
     paths:
-      - 'overview-check.mjs'
+      - 'document-vault-audit.mjs'
       - '.github/workflows/overview-check.yml'
   workflow_dispatch:
 permissions:
@@ -19,15 +19,15 @@ jobs:
           node-version: '20'
       - run: npm install
       - run: npx playwright install --with-deps chromium
-      - run: node overview-check.mjs
+      - run: node document-vault-audit.mjs
       - name: Publish focused results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add overview-check overview-check-results.json || true
+          git add document-vault-audit document-vault-audit.json || true
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Update overview navigator check"
+            git commit -m "Update document vault audit"
             git push
           fi
