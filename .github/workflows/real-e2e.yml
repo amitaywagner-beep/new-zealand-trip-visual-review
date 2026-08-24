@@ -1,0 +1,47 @@
+name: Independent Real E2E
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'real-e2e.mjs'
+      - '.github/workflows/real-e2e.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run independent E2E
+        run: node real-e2e.mjs
+        continue-on-error: true
+
+      - name: Publish E2E results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add real-e2e-results.json || true
+          if git diff --cached --quiet; then
+            echo "No E2E result changes"
+          else
+            git commit -m "Update independent E2E results"
+            git push
+          fi
