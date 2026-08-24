@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T09:08:58.917Z",
+  "generatedAt": "2026-08-24T09:11:05.051Z",
   "environment": "github-actions-playwright-chromium",
   "tests": [
     {
@@ -62,14 +62,37 @@
     },
     {
       "id": "mobile-now-430-layout-precise",
-      "success": false,
-      "error": "TimeoutError: locator.boundingBox: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.live-daily-dashboard').first()\n",
-      "details": {}
+      "success": true,
+      "error": null,
+      "details": {
+        "dashboardBox": {
+          "x": 12,
+          "y": 133,
+          "width": 406,
+          "height": 1324.171875
+        },
+        "largeMediaBefore": false,
+        "hasDay": true,
+        "hasNext": true,
+        "titles": [
+          {
+            "tag": "STRONG",
+            "className": "",
+            "top": 11.453125,
+            "height": 18.6875,
+            "width": 148,
+            "fontSize": "17px",
+            "text": "המסע של תיצ'ו וצ'וקי"
+          }
+        ],
+        "mediaBefore": [],
+        "largeBgBefore": []
+      }
     }
   ],
   "summary": {
     "total": 3,
-    "passed": 2,
-    "failed": 1
+    "passed": 3,
+    "failed": 0
   }
 }
