@@ -55,7 +55,6 @@ for (const item of sourceManifest.screenshots ?? []) {
     await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
     await page.waitForTimeout(2500);
 
-    // Give map/image tiles a chance to finish painting without relying on networkidle forever.
     await page.evaluate(async () => {
       const imgs = Array.from(document.images);
       await Promise.all(imgs.map(img => img.complete ? Promise.resolve() : new Promise(r => {
@@ -129,3 +128,5 @@ if (output.summary.failed > 0) {
   console.error(`${output.summary.failed} screenshots failed`);
   process.exitCode = 2;
 }
+
+// Manual refresh trigger: 2026-08-24T02:39Z
