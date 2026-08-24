@@ -35,29 +35,15 @@ jobs:
             }
           }
 
-          const reviewIds = [
-            'documents-overview','booking-with-documents','day-with-documents',
-            'mobile-documents-overview','mobile-day-with-documents'
-          ];
+          const reviewIds = ['documents-overview','booking-with-documents','day-with-documents','mobile-documents-overview','mobile-day-with-documents'];
           const pages = [];
-          const strip = html => html
-            .replace(/<script[\s\S]*?<\/script>/gi,' ')
-            .replace(/<style[\s\S]*?<\/style>/gi,' ')
-            .replace(/<[^>]+>/g,' ')
-            .replace(/&nbsp;/g,' ')
-            .replace(/&amp;/g,'&')
-            .replace(/&#x27;/g,"'")
-            .replace(/\s+/g,' ')
-            .trim();
-          const snippets = (text, re) => {
-            const out=[]; let m; const r=new RegExp(re.source, re.flags.includes('g')?re.flags:re.flags+'g');
-            while((m=r.exec(text)) && out.length<12){const i=m.index; out.push(text.slice(Math.max(0,i-180), Math.min(text.length,i+420))); if(r.lastIndex===m.index) r.lastIndex++;}
-            return out;
-          };
+          const strip = html => html.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&#x27;/g,"'").replace(/\s+/g,' ').trim();
+          const snippets = (text, re) => { const out=[]; let m; const r=new RegExp(re.source,re.flags.includes('g')?re.flags:re.flags+'g'); while((m=r.exec(text))&&out.length<12){const i=m.index;out.push(text.slice(Math.max(0,i-180),Math.min(text.length,i+420)));if(r.lastIndex===m.index)r.lastIndex++;} return out; };
+          let representativeHtml='';
           for (const id of reviewIds) {
             const url = `${base}/visual-review/pages/${id}`;
             try {
-              const r = await fetch(url,{cache:'no-store'}); const html=await r.text(); const text=strip(html);
+              const r = await fetch(url,{cache:'no-store'}); const html=await r.text(); if(id==='documents-overview') representativeHtml=html; const text=strip(html);
               pages.push({
                 id,status:r.status,
                 hasUploadText:/העלא|הוספ(?:ת|ה)?\s*מסמך|צרפ(?:ת|ה)?\s*מסמך|בחר\s*קובץ|upload/i.test(text),
@@ -66,6 +52,7 @@ jobs:
                 hasOfflineText:/אופליין|offline/i.test(text),
                 hasSearchText:/חיפוש במסמכים/i.test(text),
                 hasPersonalText:/מסמכים אישיים|personal/i.test(text),
+                hasFileInputInHtml:/<input[^>]+type=["']file["']/i.test(html),
                 uploadSnippets:snippets(text,/העלא|הוספ(?:ת|ה)?\s*מסמך|צרפ(?:ת|ה)?\s*מסמך|בחר\s*קובץ|upload/i),
                 documentSnippets:snippets(text,/מסמכ/i),
                 offlineSnippets:snippets(text,/אופליין|offline/i),
@@ -73,13 +60,33 @@ jobs:
             } catch(e){pages.push({id,status:null,error:String(e)});}
           }
 
+          const scriptSrcs=[...representativeHtml.matchAll(/<script[^>]+src=["']([^"']+)["']/gi)].map(m=>new URL(m[1],base).href);
+          const codeText=[];
+          for(const src of scriptSrcs.slice(0,40)){
+            try{const r=await fetch(src,{cache:'no-store'}); if(r.ok) codeText.push(await r.text());}catch{}
+          }
+          const bundle=codeText.join('\n');
+          const signalPatterns={
+            documentApi:/\/api\/(?:documents?|files?)/i,
+            upload:/upload|multipart\/form-data|FormData\s*\(/i,
+            fileInput:/type\s*:\s*["']file["']|type=["']file["']/i,
+            signedUrl:/signed.?url|presigned|presign/i,
+            storage:/private.?storage|object.?storage|storageKey|storage_key/i,
+            deleteDocument:/deleteDocument|removeDocument|document.*delete|delete.*document/i,
+            personalDocument:/isPersonalDocument|personalDocument|personal_document/i,
+            offline:/offlineEligible|offline.?eligible|cacheDocument|document.*offline/i,
+            duplicateHash:/fileHash|contentHash|sha256|duplicate.*hash/i,
+          };
+          const codeSignals={scriptCount:scriptSrcs.length,fetchedScriptCount:codeText.length};
+          for(const [k,re] of Object.entries(signalPatterns)) codeSignals[k]=re.test(bundle);
+
           const exposurePatterns=['passport','דרכון','תעודת זהות','personalDocument','Sample Hobbiton Ticket','Sample Hotel Voucher'];
           const exports={};
           for(const [name,url] of Object.entries({tripData:`${base}/trip-data.json`,tripReview:`${base}/trip-review.txt`})){
             try{const r=await fetch(url,{cache:'no-store'});const text=await r.text();exports[name]={status:r.status,exposure:{}};for(const pat of exposurePatterns)exports[name].exposure[pat]=text.toLowerCase().includes(pat.toLowerCase());}
             catch(e){exports[name]={status:null,error:String(e),exposure:{}};}
           }
-          await fs.writeFile('site-document-metadata.json',JSON.stringify({generatedAt:new Date().toISOString(),pages,exports},null,2),'utf8');
+          await fs.writeFile('site-document-metadata.json',JSON.stringify({generatedAt:new Date().toISOString(),pages,codeSignals,exports},null,2),'utf8');
           NODE
 
       - name: Publish metadata
@@ -94,4 +101,4 @@ jobs:
             git push
           fi
 
-# Manual refresh: document vault feature audit 2026-08-24T17:43+03:00
+# Manual refresh: document vault code-signal audit 2026-08-24T17:45+03:00
