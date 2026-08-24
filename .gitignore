@@ -1,0 +1,3 @@
+node_modules/
+playwright-storage-state.json
+*.storage-state.json
