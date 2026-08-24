@@ -129,4 +129,4 @@ if (output.summary.failed > 0) {
   process.exitCode = 2;
 }
 
-// Manual refresh trigger: 2026-08-24T07:13Z
+// Manual refresh trigger: 2026-08-24T11:53+03:00
