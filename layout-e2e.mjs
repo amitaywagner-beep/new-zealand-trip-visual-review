@@ -4,7 +4,7 @@ const BASE='https://amitai-new-zealand-trip.amitaywagner.chatgpt.site';
 const cases=[
  ['390','/visual-review/pages/mobile-now-trip-day-06',390,844],
  ['360','/visual-review/pages/mobile-360-now-trip-day-06',360,800],
- ['430','/visual-review/pages/mobile-430-now-trip-day-06',430,932],
+ ['430','/visual-review/pages/mobile-now-trip-day-06',430,932],
 ];
 const browser=await chromium.launch({headless:true});
 const tests=[];
