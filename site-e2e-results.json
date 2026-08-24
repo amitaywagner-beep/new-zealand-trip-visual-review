@@ -1,82 +1,27 @@
 {
-  "siteVersion": "35",
-  "generatedAt": "2026-08-24T08:27:09Z",
+  "siteVersion": "37",
+  "generatedAt": "2026-08-24T11:31:42Z",
   "captureEnvironment": "playwright-chromium",
   "tests": [
-    {
-      "id": "day-to-booking-hobbiton",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "booking-to-day-hobbiton",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "day-to-map-hobbiton",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "route-segment-01-to-map",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "route-segment-05-to-map",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "route-segment-09-to-map",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "route-segment-13-to-map",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "now-trip-day-06",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "mobile-day-to-booking-hobbiton",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "mobile-day-to-map-hobbiton",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "mobile-now-trip-day-06-390",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "mobile-now-trip-day-06-360",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "mobile-now-trip-day-06-430",
-      "success": true,
-      "error": null
-    },
-    {
-      "id": "tablet-now-trip-day-06",
-      "success": true,
-      "error": null
-    }
+    { "id": "day-to-booking-hobbiton", "success": true, "error": null },
+    { "id": "booking-to-day-hobbiton", "success": true, "error": null },
+    { "id": "day-to-map-hobbiton", "success": true, "error": null },
+    { "id": "route-segment-01-to-map", "success": true, "error": null },
+    { "id": "route-segment-05-to-map", "success": true, "error": null },
+    { "id": "route-segment-09-to-map", "success": true, "error": null },
+    { "id": "route-segment-13-to-map", "success": true, "error": null },
+    { "id": "region-taranaki-to-map", "success": true, "error": null },
+    { "id": "mobile-region-taranaki-to-map", "success": true, "error": null },
+    { "id": "overview-stop-to-map", "success": true, "error": null },
+    { "id": "mobile-overview-stop-to-map", "success": true, "error": null },
+    { "id": "overview-palmerston-to-map", "success": true, "error": null },
+    { "id": "now-trip-day-06", "success": true, "error": null },
+    { "id": "mobile-day-to-booking-hobbiton", "success": true, "error": null },
+    { "id": "mobile-day-to-map-hobbiton", "success": true, "error": null },
+    { "id": "mobile-now-trip-day-06-390", "success": true, "error": null },
+    { "id": "mobile-now-trip-day-06-360", "success": true, "error": null },
+    { "id": "mobile-now-trip-day-06-430", "success": true, "error": null },
+    { "id": "tablet-now-trip-day-06", "success": true, "error": null }
   ],
-  "summary": {
-    "total": 14,
-    "passed": 14,
-    "failed": 0
-  }
+  "summary": { "total": 19, "passed": 19, "failed": 0 }
 }

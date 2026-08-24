@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-08-24T08:29:23.991Z",
-  "siteVersion": "35",
+  "generatedAt": "2026-08-24T14:22:33.173Z",
+  "siteVersion": "38",
   "mode": "review-pages",
   "headlessBrowserAvailable": false,
   "localDeviceStateIncluded": false,
   "privacy": {
     "sharedNotesIncluded": false,
     "bookingNumbersIncluded": false,
-    "authenticationDataIncluded": false
+    "authenticationDataIncluded": false,
+    "documentContentsIncluded": false,
+    "personalDocumentMetadataIncluded": false
   },
   "capabilityNote": "סביבת הבנייה אינה כוללת Playwright, Puppeteer או Chromium Headless. כל כתובת מציגה מצב קבוע של רכיבי האתר האמיתיים לצורך צילום חיצוני.",
   "screenshots": [
@@ -21,7 +23,7 @@
       "state": {
         "screen": "now"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -41,7 +43,7 @@
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
       "captureTarget": ".live-daily-dashboard",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -60,7 +62,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -79,7 +81,7 @@
         "screen": "route",
         "mapStyle": "map"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -97,7 +99,7 @@
       "state": {
         "screen": "days"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -115,7 +117,115 @@
       "state": {
         "screen": "bookings"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "documents-overview",
+      "url": "/visual-review/pages/documents-overview",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings",
+        "mockDocuments": true,
+        "anchor": ".documents-hub"
+      },
+      "captureTarget": ".documents-hub",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "booking-with-documents",
+      "url": "/visual-review/pages/booking-with-documents",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings",
+        "mockDocuments": true,
+        "selectedBookingId": "hobbiton",
+        "anchor": "[data-booking-id='hobbiton']"
+      },
+      "captureTarget": "[data-booking-id='hobbiton']",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-with-documents",
+      "url": "/visual-review/pages/day-with-documents",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "mockDocuments": true,
+        "openDayNumber": 6
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-documents-overview",
+      "url": "/visual-review/pages/mobile-documents-overview",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": false,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings",
+        "mockDocuments": true,
+        "anchor": ".documents-hub"
+      },
+      "captureTarget": ".documents-hub",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-day-with-documents",
+      "url": "/visual-review/pages/mobile-day-with-documents",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "mockDocuments": true,
+        "openDayNumber": 6
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -133,7 +243,7 @@
       "state": {
         "screen": "preparations"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -154,7 +264,7 @@
         "anchor": ".atlas-route-controls"
       },
       "captureTarget": ".route-screen",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -177,7 +287,7 @@
         "anchor": ".atlas-route-layout"
       },
       "captureTarget": ".atlas-route-layout",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -200,7 +310,7 @@
         "anchor": ".atlas-route-layout"
       },
       "captureTarget": ".atlas-route-layout",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -223,7 +333,7 @@
         "anchor": ".atlas-route-layout"
       },
       "captureTarget": ".atlas-route-layout",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -246,7 +356,7 @@
         "anchor": ".atlas-route-layout"
       },
       "captureTarget": ".atlas-route-layout",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -268,7 +378,7 @@
         "anchor": "#road-segment-09"
       },
       "captureTarget": "#road-segment-09",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -291,7 +401,7 @@
         "anchor": ".atlas-route-layout"
       },
       "captureTarget": ".atlas-route-layout",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -312,7 +422,7 @@
         "anchor": ".route-overview-graphic"
       },
       "captureTarget": ".route-overview-graphic",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -321,8 +431,8 @@
       }
     },
     {
-      "id": "regional-windows",
-      "url": "/visual-review/pages/regional-windows",
+      "id": "overview-stop-auckland-selected",
+      "url": "/visual-review/pages/overview-stop-auckland-selected",
       "viewport": "1440x1000",
       "deviceScaleFactor": 1,
       "fullPage": false,
@@ -330,10 +440,11 @@
       "state": {
         "screen": "route",
         "mapStyle": "satellite",
-        "anchor": ".regional-atlas"
+        "selectedStopId": "auckland",
+        "anchor": ".route-overview-graphic"
       },
-      "captureTarget": ".regional-atlas",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "captureTarget": ".route-overview-graphic",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -342,8 +453,8 @@
       }
     },
     {
-      "id": "region-coromandel",
-      "url": "/visual-review/pages/region-coromandel",
+      "id": "overview-stop-palmerston-selected",
+      "url": "/visual-review/pages/overview-stop-palmerston-selected",
       "viewport": "1440x1000",
       "deviceScaleFactor": 1,
       "fullPage": false,
@@ -351,10 +462,11 @@
       "state": {
         "screen": "route",
         "mapStyle": "satellite",
-        "anchor": "[data-review-region='coromandel']"
+        "selectedStopId": "palmerston",
+        "anchor": ".route-overview-graphic"
       },
-      "captureTarget": "[data-review-region='coromandel']",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "captureTarget": ".route-overview-graphic",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -363,8 +475,8 @@
       }
     },
     {
-      "id": "region-rotorua-taupo",
-      "url": "/visual-review/pages/region-rotorua-taupo",
+      "id": "regional-selector",
+      "url": "/visual-review/pages/regional-selector",
       "viewport": "1440x1000",
       "deviceScaleFactor": 1,
       "fullPage": false,
@@ -372,10 +484,10 @@
       "state": {
         "screen": "route",
         "mapStyle": "satellite",
-        "anchor": "[data-review-region='rotorua-taupo']"
+        "anchor": ".regional-route-selector"
       },
-      "captureTarget": "[data-review-region='rotorua-taupo']",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "captureTarget": ".regional-route-selector",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -384,8 +496,8 @@
       }
     },
     {
-      "id": "region-taranaki",
-      "url": "/visual-review/pages/region-taranaki",
+      "id": "region-coromandel-map",
+      "url": "/visual-review/pages/region-coromandel-map",
       "viewport": "1440x1000",
       "deviceScaleFactor": 1,
       "fullPage": false,
@@ -393,10 +505,11 @@
       "state": {
         "screen": "route",
         "mapStyle": "satellite",
-        "anchor": "[data-review-region='taranaki']"
+        "selectedRegionId": "coromandel",
+        "anchor": ".atlas-route-layout"
       },
-      "captureTarget": "[data-review-region='taranaki']",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -405,8 +518,8 @@
       }
     },
     {
-      "id": "region-tongariro",
-      "url": "/visual-review/pages/region-tongariro",
+      "id": "region-rotorua-taupo-map",
+      "url": "/visual-review/pages/region-rotorua-taupo-map",
       "viewport": "1440x1000",
       "deviceScaleFactor": 1,
       "fullPage": false,
@@ -414,10 +527,11 @@
       "state": {
         "screen": "route",
         "mapStyle": "satellite",
-        "anchor": "[data-review-region='tongariro']"
+        "selectedRegionId": "rotorua-taupo",
+        "anchor": ".atlas-route-layout"
       },
-      "captureTarget": "[data-review-region='tongariro']",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -426,8 +540,8 @@
       }
     },
     {
-      "id": "region-hawkes-bay",
-      "url": "/visual-review/pages/region-hawkes-bay",
+      "id": "region-taranaki-map",
+      "url": "/visual-review/pages/region-taranaki-map",
       "viewport": "1440x1000",
       "deviceScaleFactor": 1,
       "fullPage": false,
@@ -435,10 +549,100 @@
       "state": {
         "screen": "route",
         "mapStyle": "satellite",
-        "anchor": "[data-review-region='hawkes-bay']"
+        "selectedRegionId": "taranaki",
+        "anchor": ".atlas-route-layout"
       },
-      "captureTarget": "[data-review-region='hawkes-bay']",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "region-tongariro-map",
+      "url": "/visual-review/pages/region-tongariro-map",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedRegionId": "tongariro",
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "region-hawkes-bay-map",
+      "url": "/visual-review/pages/region-hawkes-bay-map",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedRegionId": "hawkes-bay",
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-regional-selector",
+      "url": "/visual-review/pages/mobile-regional-selector",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".regional-route-selector"
+      },
+      "captureTarget": ".regional-route-selector",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-region-taranaki-map",
+      "url": "/visual-review/pages/mobile-region-taranaki-map",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedRegionId": "taranaki",
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -458,7 +662,7 @@
         "openDayNumber": 1
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -478,7 +682,7 @@
         "openDayNumber": 4
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -498,7 +702,7 @@
         "openDayNumber": 6
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -518,7 +722,7 @@
         "openDayNumber": 6
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -538,7 +742,7 @@
         "openDayNumber": 5
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -558,7 +762,7 @@
         "openDayNumber": 14
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -578,7 +782,7 @@
         "openDayNumber": 18
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -599,7 +803,7 @@
         "anchor": ".day-mini-map-card"
       },
       "captureTarget": ".day-mini-map-card",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -620,7 +824,7 @@
         "anchor": ".day-mini-map-card"
       },
       "captureTarget": ".day-mini-map-card",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -641,7 +845,7 @@
         "anchor": "#hotel-review-manha"
       },
       "captureTarget": "#hotel-review-manha",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -662,7 +866,7 @@
         "anchor": "#hotel-review-devon"
       },
       "captureTarget": "#hotel-review-devon",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -684,7 +888,7 @@
         "anchor": "#hotel-review-le-chalet"
       },
       "captureTarget": "#hotel-review-le-chalet",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -706,7 +910,7 @@
         "anchor": "[data-booking-id='hobbiton']"
       },
       "captureTarget": "[data-booking-id='hobbiton']",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -731,7 +935,7 @@
         "anchor": ".atlas-route-layout"
       },
       "captureTarget": ".atlas-route-layout",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -750,7 +954,7 @@
       "state": {
         "screen": "now"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -770,7 +974,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -790,7 +994,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -809,7 +1013,7 @@
       "state": {
         "screen": "days"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -830,7 +1034,7 @@
         "openDayNumber": 6
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -849,7 +1053,7 @@
       "state": {
         "screen": "bookings"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -868,7 +1072,7 @@
       "state": {
         "screen": "preparations"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -890,7 +1094,7 @@
         "anchor": ".atlas-route-layout"
       },
       "captureTarget": ".atlas-route-layout",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -914,7 +1118,7 @@
         "anchor": ".atlas-route-layout"
       },
       "captureTarget": ".atlas-route-layout",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -938,7 +1142,7 @@
         "anchor": ".atlas-route-layout"
       },
       "captureTarget": ".atlas-route-layout",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -960,7 +1164,52 @@
         "anchor": ".route-overview-graphic"
       },
       "captureTarget": ".route-overview-graphic",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-trip-overview",
+      "url": "/visual-review/pages/mobile-trip-overview",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".route-overview-graphic"
+      },
+      "captureTarget": ".route-overview-graphic",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-overview-stop-06-selected",
+      "url": "/visual-review/pages/mobile-overview-stop-06-selected",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "new-plymouth",
+        "anchor": ".route-overview-graphic"
+      },
+      "captureTarget": ".route-overview-graphic",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -979,7 +1228,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -998,7 +1247,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -1018,7 +1267,7 @@
         "openDayNumber": 6
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -1038,7 +1287,7 @@
         "openDayNumber": 6
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -1057,7 +1306,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -1077,7 +1326,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
@@ -1098,7 +1347,7 @@
         "openDayNumber": 6
       },
       "captureTarget": ".day-drawer",
-      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "generatedAt": "2026-08-24T14:22:33.173Z",
       "success": true,
       "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
       "consoleSummary": {
