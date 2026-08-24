@@ -1,0 +1,38 @@
+name: Regional Navigator Check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'regional-check.mjs'
+      - '.github/workflows/regional-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - name: Run regional checks
+        run: node regional-check.mjs
+        continue-on-error: true
+      - name: Publish results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add regional-check-results.json regional-desktop.png regional-mobile.png || true
+          if git diff --cached --quiet; then
+            echo "No regional check changes"
+          else
+            git commit -m "Update regional navigator check"
+            git push
+          fi
