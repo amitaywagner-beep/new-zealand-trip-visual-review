@@ -30,62 +30,56 @@ jobs:
               const r = await fetch(url, { cache: 'no-store' });
               const text = await r.text();
               await fs.writeFile(file, text, 'utf8');
-              console.log(url, r.status, text.slice(0, 200));
             } catch (e) {
               await fs.writeFile(file, JSON.stringify({fetchError:String(e)}, null, 2), 'utf8');
             }
           }
 
           const reviewIds = [
-            'documents-overview',
-            'booking-with-documents',
-            'day-with-documents',
-            'mobile-documents-overview',
-            'mobile-day-with-documents',
+            'documents-overview','booking-with-documents','day-with-documents',
+            'mobile-documents-overview','mobile-day-with-documents'
           ];
           const pages = [];
           const strip = html => html
-            .replace(/<script[\s\S]*?<\/script>/gi, ' ')
-            .replace(/<style[\s\S]*?<\/style>/gi, ' ')
-            .replace(/<[^>]+>/g, ' ')
-            .replace(/&nbsp;/g, ' ')
-            .replace(/&amp;/g, '&')
-            .replace(/\s+/g, ' ')
+            .replace(/<script[\s\S]*?<\/script>/gi,' ')
+            .replace(/<style[\s\S]*?<\/style>/gi,' ')
+            .replace(/<[^>]+>/g,' ')
+            .replace(/&nbsp;/g,' ')
+            .replace(/&amp;/g,'&')
+            .replace(/&#x27;/g,"'")
+            .replace(/\s+/g,' ')
             .trim();
+          const snippets = (text, re) => {
+            const out=[]; let m; const r=new RegExp(re.source, re.flags.includes('g')?re.flags:re.flags+'g');
+            while((m=r.exec(text)) && out.length<12){const i=m.index; out.push(text.slice(Math.max(0,i-180), Math.min(text.length,i+420))); if(r.lastIndex===m.index) r.lastIndex++;}
+            return out;
+          };
           for (const id of reviewIds) {
             const url = `${base}/visual-review/pages/${id}`;
             try {
-              const r = await fetch(url, { cache: 'no-store' });
-              const html = await r.text();
-              const text = strip(html);
+              const r = await fetch(url,{cache:'no-store'}); const html=await r.text(); const text=strip(html);
               pages.push({
-                id,
-                status: r.status,
-                textSample: text.slice(0, 5000),
-                hasUploadText: /העלא|upload/i.test(text),
-                hasOpenText: /פתיח|פתיחה|open/i.test(text),
-                hasDeleteText: /מחיק|delete/i.test(text),
-                hasDocumentText: /מסמכ|document/i.test(text),
-                hasPersonalText: /אישי|personal/i.test(text),
+                id,status:r.status,
+                hasUploadText:/העלא|הוספ(?:ת|ה)?\s*מסמך|צרפ(?:ת|ה)?\s*מסמך|בחר\s*קובץ|upload/i.test(text),
+                hasOpenText:/פתיח|פתיחה|open/i.test(text),
+                hasDeleteText:/מחיק|delete/i.test(text),
+                hasOfflineText:/אופליין|offline/i.test(text),
+                hasSearchText:/חיפוש במסמכים/i.test(text),
+                hasPersonalText:/מסמכים אישיים|personal/i.test(text),
+                uploadSnippets:snippets(text,/העלא|הוספ(?:ת|ה)?\s*מסמך|צרפ(?:ת|ה)?\s*מסמך|בחר\s*קובץ|upload/i),
+                documentSnippets:snippets(text,/מסמכ/i),
+                offlineSnippets:snippets(text,/אופליין|offline/i),
               });
-            } catch (e) {
-              pages.push({ id, status: null, error: String(e) });
-            }
+            } catch(e){pages.push({id,status:null,error:String(e)});}
           }
 
-          const exposurePatterns = ['passport','דרכון','תעודת זהות','personalDocument','Sample Hobbiton Ticket','Sample Hotel Voucher'];
-          const exports = {};
-          for (const [name, url] of Object.entries({tripData:`${base}/trip-data.json`, tripReview:`${base}/trip-review.txt`})) {
-            try {
-              const r = await fetch(url, { cache: 'no-store' });
-              const text = await r.text();
-              exports[name] = { status: r.status, exposure: {} };
-              for (const pat of exposurePatterns) exports[name].exposure[pat] = text.toLowerCase().includes(pat.toLowerCase());
-            } catch (e) {
-              exports[name] = { status: null, error: String(e), exposure: {} };
-            }
+          const exposurePatterns=['passport','דרכון','תעודת זהות','personalDocument','Sample Hobbiton Ticket','Sample Hotel Voucher'];
+          const exports={};
+          for(const [name,url] of Object.entries({tripData:`${base}/trip-data.json`,tripReview:`${base}/trip-review.txt`})){
+            try{const r=await fetch(url,{cache:'no-store'});const text=await r.text();exports[name]={status:r.status,exposure:{}};for(const pat of exposurePatterns)exports[name].exposure[pat]=text.toLowerCase().includes(pat.toLowerCase());}
+            catch(e){exports[name]={status:null,error:String(e),exposure:{}};}
           }
-          await fs.writeFile('site-document-metadata.json', JSON.stringify({generatedAt:new Date().toISOString(), pages, exports}, null, 2), 'utf8');
+          await fs.writeFile('site-document-metadata.json',JSON.stringify({generatedAt:new Date().toISOString(),pages,exports},null,2),'utf8');
           NODE
 
       - name: Publish metadata
@@ -100,4 +94,4 @@ jobs:
             git push
           fi
 
-# Manual refresh: document vault metadata audit 2026-08-24T17:40+03:00
+# Manual refresh: document vault feature audit 2026-08-24T17:43+03:00
