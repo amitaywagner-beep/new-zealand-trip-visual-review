@@ -1,0 +1,1111 @@
+{
+  "generatedAt": "2026-08-24T08:29:23.991Z",
+  "siteVersion": "35",
+  "mode": "review-pages",
+  "headlessBrowserAvailable": false,
+  "localDeviceStateIncluded": false,
+  "privacy": {
+    "sharedNotesIncluded": false,
+    "bookingNumbersIncluded": false,
+    "authenticationDataIncluded": false
+  },
+  "capabilityNote": "סביבת הבנייה אינה כוללת Playwright, Puppeteer או Chromium Headless. כל כתובת מציגה מצב קבוע של רכיבי האתר האמיתיים לצורך צילום חיצוני.",
+  "screenshots": [
+    {
+      "id": "desktop-now",
+      "url": "/visual-review/pages/desktop-now",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "now",
+      "state": {
+        "screen": "now"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "now-trip-day-06",
+      "url": "/visual-review/pages/now-trip-day-06",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "now",
+      "state": {
+        "screen": "now",
+        "mockNow": "2026-11-05T08:48:00+13:00"
+      },
+      "captureTarget": ".live-daily-dashboard",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "desktop-route-satellite",
+      "url": "/visual-review/pages/desktop-route-satellite",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "desktop-route-map",
+      "url": "/visual-review/pages/desktop-route-map",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "map"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "desktop-days",
+      "url": "/visual-review/pages/desktop-days",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "desktop-bookings",
+      "url": "/visual-review/pages/desktop-bookings",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "desktop-preparations",
+      "url": "/visual-review/pages/desktop-preparations",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "preparations",
+      "state": {
+        "screen": "preparations"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "desktop-route-main-map",
+      "url": "/visual-review/pages/desktop-route-main-map",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".atlas-route-controls"
+      },
+      "captureTarget": ".route-screen",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "station-rotorua",
+      "url": "/visual-review/pages/station-rotorua",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "rotorua",
+        "focusStop": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "station-new-plymouth",
+      "url": "/visual-review/pages/station-new-plymouth",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "new-plymouth",
+        "focusStop": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "station-napier",
+      "url": "/visual-review/pages/station-napier",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "napier",
+        "focusStop": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "station-palmerston-north",
+      "url": "/visual-review/pages/station-palmerston-north",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "palmerston",
+        "focusStop": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "route-segment-09-card",
+      "url": "/visual-review/pages/route-segment-09-card",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedSegmentId": "road-segment-09",
+        "anchor": "#road-segment-09"
+      },
+      "captureTarget": "#road-segment-09",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "route-segment-09-map",
+      "url": "/visual-review/pages/route-segment-09-map",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedSegmentId": "road-segment-09",
+        "focusSegment": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "trip-at-a-glance",
+      "url": "/visual-review/pages/trip-at-a-glance",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".route-overview-graphic"
+      },
+      "captureTarget": ".route-overview-graphic",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "regional-windows",
+      "url": "/visual-review/pages/regional-windows",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".regional-atlas"
+      },
+      "captureTarget": ".regional-atlas",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "region-coromandel",
+      "url": "/visual-review/pages/region-coromandel",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": "[data-review-region='coromandel']"
+      },
+      "captureTarget": "[data-review-region='coromandel']",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "region-rotorua-taupo",
+      "url": "/visual-review/pages/region-rotorua-taupo",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": "[data-review-region='rotorua-taupo']"
+      },
+      "captureTarget": "[data-review-region='rotorua-taupo']",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "region-taranaki",
+      "url": "/visual-review/pages/region-taranaki",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": "[data-review-region='taranaki']"
+      },
+      "captureTarget": "[data-review-region='taranaki']",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "region-tongariro",
+      "url": "/visual-review/pages/region-tongariro",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": "[data-review-region='tongariro']"
+      },
+      "captureTarget": "[data-review-region='tongariro']",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "region-hawkes-bay",
+      "url": "/visual-review/pages/region-hawkes-bay",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": "[data-review-region='hawkes-bay']"
+      },
+      "captureTarget": "[data-review-region='hawkes-bay']",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-01-open",
+      "url": "/visual-review/pages/day-01-open",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 1
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-04-open",
+      "url": "/visual-review/pages/day-04-open",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 4
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-06-open",
+      "url": "/visual-review/pages/day-06-open",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 6
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-multiple-bookings-open",
+      "url": "/visual-review/pages/day-multiple-bookings-open",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 6
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-no-breakfast-open",
+      "url": "/visual-review/pages/day-no-breakfast-open",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 5
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-tongariro-open",
+      "url": "/visual-review/pages/day-tongariro-open",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 14
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-wedding-open",
+      "url": "/visual-review/pages/day-wedding-open",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 18
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-04-minimap",
+      "url": "/visual-review/pages/day-04-minimap",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 4,
+        "anchor": ".day-mini-map-card"
+      },
+      "captureTarget": ".day-mini-map-card",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-06-minimap",
+      "url": "/visual-review/pages/day-06-minimap",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 6,
+        "anchor": ".day-mini-map-card"
+      },
+      "captureTarget": ".day-mini-map-card",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "hotel-breakfast-included",
+      "url": "/visual-review/pages/hotel-breakfast-included",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings",
+        "hotelId": "manha",
+        "anchor": "#hotel-review-manha"
+      },
+      "captureTarget": "#hotel-review-manha",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "hotel-breakfast-paid",
+      "url": "/visual-review/pages/hotel-breakfast-paid",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings",
+        "hotelId": "devon",
+        "anchor": "#hotel-review-devon"
+      },
+      "captureTarget": "#hotel-review-devon",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "hotel-no-breakfast-groceries",
+      "url": "/visual-review/pages/hotel-no-breakfast-groceries",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings",
+        "hotelId": "le-chalet",
+        "openGroceries": true,
+        "anchor": "#hotel-review-le-chalet"
+      },
+      "captureTarget": "#hotel-review-le-chalet",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "booking-from-day-hobbiton",
+      "url": "/visual-review/pages/booking-from-day-hobbiton",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings",
+        "selectedBookingId": "hobbiton",
+        "returnDayNumber": 6,
+        "anchor": "[data-booking-id='hobbiton']"
+      },
+      "captureTarget": "[data-booking-id='hobbiton']",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "day-to-map-hobbiton",
+      "url": "/visual-review/pages/day-to-map-hobbiton",
+      "viewport": "1440x1000",
+      "deviceScaleFactor": 1,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "rotorua",
+        "selectedSegmentId": "road-segment-05",
+        "focusedPoiId": "hobbiton",
+        "returnDayNumber": 6,
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-now",
+      "url": "/visual-review/pages/mobile-now",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": true,
+      "screen": "now",
+      "state": {
+        "screen": "now"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-now-trip-day-06",
+      "url": "/visual-review/pages/mobile-now-trip-day-06",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": true,
+      "screen": "now",
+      "state": {
+        "screen": "now",
+        "mockNow": "2026-11-05T08:48:00+13:00"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-route",
+      "url": "/visual-review/pages/mobile-route",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": true,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-days",
+      "url": "/visual-review/pages/mobile-days",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-day-06-command",
+      "url": "/visual-review/pages/mobile-day-06-command",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 6
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-bookings",
+      "url": "/visual-review/pages/mobile-bookings",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": true,
+      "screen": "bookings",
+      "state": {
+        "screen": "bookings"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-preparations",
+      "url": "/visual-review/pages/mobile-preparations",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": true,
+      "screen": "preparations",
+      "state": {
+        "screen": "preparations"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-route-all",
+      "url": "/visual-review/pages/mobile-route-all",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-route-zoom",
+      "url": "/visual-review/pages/mobile-route-zoom",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedStopId": "rotorua",
+        "focusStop": true,
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-route-poi-open",
+      "url": "/visual-review/pages/mobile-route-poi-open",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "selectedSegmentId": "road-segment-05",
+        "reviewWaypointId": "waitomo",
+        "anchor": ".atlas-route-layout"
+      },
+      "captureTarget": ".atlas-route-layout",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-trip-at-a-glance",
+      "url": "/visual-review/pages/mobile-trip-at-a-glance",
+      "viewport": "390x844",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": false,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite",
+        "anchor": ".route-overview-graphic"
+      },
+      "captureTarget": ".route-overview-graphic",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "tablet-route-portrait",
+      "url": "/visual-review/pages/tablet-route-portrait",
+      "viewport": "768x1024",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "tablet-route-landscape",
+      "url": "/visual-review/pages/tablet-route-landscape",
+      "viewport": "1024x768",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "route",
+      "state": {
+        "screen": "route",
+        "mapStyle": "satellite"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "tablet-day-06-portrait",
+      "url": "/visual-review/pages/tablet-day-06-portrait",
+      "viewport": "768x1024",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 6
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "tablet-day-06-landscape",
+      "url": "/visual-review/pages/tablet-day-06-landscape",
+      "viewport": "1024x768",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 6
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "desktop-wide-now-trip-day-06",
+      "url": "/visual-review/pages/desktop-wide-now-trip-day-06",
+      "viewport": "1920x1080",
+      "deviceScaleFactor": 1,
+      "fullPage": true,
+      "screen": "now",
+      "state": {
+        "screen": "now",
+        "mockNow": "2026-11-05T08:48:00+13:00"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-360-now-trip-day-06",
+      "url": "/visual-review/pages/mobile-360-now-trip-day-06",
+      "viewport": "360x800",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": true,
+      "screen": "now",
+      "state": {
+        "screen": "now",
+        "mockNow": "2026-11-05T08:48:00+13:00"
+      },
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    },
+    {
+      "id": "mobile-430-day-06-command",
+      "url": "/visual-review/pages/mobile-430-day-06-command",
+      "viewport": "430x932",
+      "deviceScaleFactor": 2,
+      "emulateTouch": true,
+      "fullPage": true,
+      "screen": "days",
+      "state": {
+        "screen": "days",
+        "openDayNumber": 6
+      },
+      "captureTarget": ".day-drawer",
+      "generatedAt": "2026-08-24T08:29:23.991Z",
+      "success": true,
+      "notes": "עמוד ביקורת קבוע נוצר בהצלחה; לא נוצר קובץ PNG במצב review-pages.",
+      "consoleSummary": {
+        "collected": false,
+        "reason": "איסוף שגיאות דפדפן זמין רק בזמן capture חיצוני של עמוד הביקורת."
+      }
+    }
+  ],
+  "issues": []
+}
