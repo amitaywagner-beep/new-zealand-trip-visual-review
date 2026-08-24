@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T19:21:00.384Z",
+  "generatedAt": "2026-08-24T19:25:00.710Z",
   "baseUrl": "https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site",
   "environment": "github-actions-playwright-chromium",
   "viewportMobile": "390x844",
@@ -9,8 +9,8 @@
     {
       "id": "authentication",
       "success": false,
-      "startedAt": "2026-08-24T19:20:56.846Z",
-      "finishedAt": "2026-08-24T19:21:00.333Z",
+      "startedAt": "2026-08-24T19:24:57.530Z",
+      "finishedAt": "2026-08-24T19:25:00.667Z",
       "error": "Error: Invite field not found after loading authenticated ChatGPT storage state. emailFieldPresent=false; controls=[{\"tag\":\"A\",\"type\":null,\"name\":null,\"text\":\"Continue with ChatGPT\"},{\"tag\":\"A\",\"type\":null,\"name\":null,\"text\":\"Privacy Policy\"}]\n    at authenticate (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:104:11)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:314:48\n    at async record (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:314:5"
     }
   ],
