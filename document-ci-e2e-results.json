@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T13:57:13.557Z",
+  "generatedAt": "2026-08-25T15:41:03.123Z",
   "baseUrl": "https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site",
   "environment": "github-actions-playwright-chromium",
   "viewportMobile": "390x844",
@@ -9,8 +9,8 @@
     {
       "id": "authentication",
       "success": true,
-      "startedAt": "2026-08-25T13:56:12.963Z",
-      "finishedAt": "2026-08-25T13:56:17.931Z",
+      "startedAt": "2026-08-25T15:40:06.530Z",
+      "finishedAt": "2026-08-25T15:40:11.254Z",
       "details": {
         "chatgptSessionAccepted": true,
         "inviteRequired": false
@@ -19,21 +19,31 @@
     {
       "id": "association-rendering",
       "success": false,
-      "startedAt": "2026-08-25T13:56:17.942Z",
-      "finishedAt": "2026-08-25T13:56:45.562Z",
-      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('.day-drawer').first().locator('.document-row[data-document-id]').filter({ hasText: 'CI association test 1787666172179.pdf' }).first() to be visible\n\n    at verifyDay (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:256:13)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:330:25\n    at async record (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:321:7"
+      "startedAt": "2026-08-25T15:40:11.264Z",
+      "finishedAt": "2026-08-25T15:40:38.604Z",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('.day-drawer').first().locator('.document-row[data-document-id]').filter({ hasText: 'CI association test 1787672406181.pdf' }).first() to be visible\n\n    at verifyDay (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:256:13)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:330:25\n    at async record (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:321:7"
     },
     {
       "id": "mobile-real-upload-390x844",
-      "success": false,
-      "startedAt": "2026-08-25T13:56:45.562Z",
-      "finishedAt": "2026-08-25T13:57:13.529Z",
-      "error": "Error: Document still present after delete and reload\n    at deleteDocument (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:297:22)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:353:11\n    at async record (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:339:7"
+      "success": true,
+      "startedAt": "2026-08-25T15:40:38.605Z",
+      "finishedAt": "2026-08-25T15:41:03.099Z",
+      "details": {
+        "viewport": "390x844",
+        "touch": true,
+        "documentId": "document-04eeb942-f8b1-4064-8fe9-76189f8338c9",
+        "persisted": true,
+        "opened": {
+          "method": "response",
+          "status": 200
+        },
+        "deleted": true
+      }
     }
   ],
   "summary": {
     "total": 3,
-    "passed": 1,
-    "failed": 2
+    "passed": 2,
+    "failed": 1
   }
 }
