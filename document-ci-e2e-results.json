@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T13:40:33.205Z",
+  "generatedAt": "2026-08-25T13:57:13.557Z",
   "baseUrl": "https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site",
   "environment": "github-actions-playwright-chromium",
   "viewportMobile": "390x844",
@@ -9,8 +9,8 @@
     {
       "id": "authentication",
       "success": true,
-      "startedAt": "2026-08-25T13:38:40.538Z",
-      "finishedAt": "2026-08-25T13:38:45.409Z",
+      "startedAt": "2026-08-25T13:56:12.963Z",
+      "finishedAt": "2026-08-25T13:56:17.931Z",
       "details": {
         "chatgptSessionAccepted": true,
         "inviteRequired": false
@@ -19,16 +19,16 @@
     {
       "id": "association-rendering",
       "success": false,
-      "startedAt": "2026-08-25T13:38:45.420Z",
-      "finishedAt": "2026-08-25T13:39:12.890Z",
-      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('.day-drawer').first().locator('.document-row[data-document-id]').filter({ hasText: 'CI association test 1787665120233.pdf' }).first() to be visible\n\n    at verifyDay (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:256:13)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:330:25\n    at async record (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:321:7"
+      "startedAt": "2026-08-25T13:56:17.942Z",
+      "finishedAt": "2026-08-25T13:56:45.562Z",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('.day-drawer').first().locator('.document-row[data-document-id]').filter({ hasText: 'CI association test 1787666172179.pdf' }).first() to be visible\n\n    at verifyDay (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:256:13)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:330:25\n    at async record (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:321:7"
     },
     {
       "id": "mobile-real-upload-390x844",
       "success": false,
-      "startedAt": "2026-08-25T13:39:12.890Z",
-      "finishedAt": "2026-08-25T13:40:33.176Z",
-      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator('.documents-hub .document-row[data-document-id]').filter({ hasText: 'CI mobile upload 1787665120233.pdf' }).first().getByRole('button', { name: /מחיק/i }).first()\n    - locator resolved to <button class=\"document-delete\">מחיקה</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <iframe title=\"CI mobile upload 1787665120233.pdf\" src=\"blob:https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site/62a477c0-912c-45eb-8fcd-b9e00dc26186\"></iframe> from <div role=\"dialog\" aria-modal=\"true\" class=\"document-viewer-shell\" aria-labelledby=\"document-viewer-title\">…</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiti"
+      "startedAt": "2026-08-25T13:56:45.562Z",
+      "finishedAt": "2026-08-25T13:57:13.529Z",
+      "error": "Error: Document still present after delete and reload\n    at deleteDocument (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:297:22)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:353:11\n    at async record (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:339:7"
     }
   ],
   "summary": {
