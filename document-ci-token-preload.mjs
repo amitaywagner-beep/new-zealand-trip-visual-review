@@ -9,6 +9,40 @@ if (!ciToken) {
 
 const originalLaunch = chromium.launch.bind(chromium);
 
+function summarizeDocumentPayload(payload, method) {
+  const syntheticRe = /CI (association test|mobile upload) \d+\.pdf/;
+  const keys = payload && typeof payload === 'object' && !Array.isArray(payload)
+    ? Object.keys(payload).slice(0, 20)
+    : [];
+
+  if (method === 'POST') {
+    const json = JSON.stringify(payload ?? null);
+    const documentObject = payload?.document && typeof payload.document === 'object' ? payload.document : null;
+    return {
+      shape: Array.isArray(payload) ? 'array' : typeof payload,
+      keys,
+      success: typeof payload?.success === 'boolean' ? payload.success : null,
+      hasId: Boolean(payload?.id || payload?.documentId || documentObject?.id),
+      syntheticNamePresent: syntheticRe.test(json),
+      errorCode: typeof payload?.code === 'string' ? payload.code.slice(0, 80) : null,
+    };
+  }
+
+  let docs = null;
+  if (Array.isArray(payload)) docs = payload;
+  else if (Array.isArray(payload?.documents)) docs = payload.documents;
+  else if (Array.isArray(payload?.items)) docs = payload.items;
+  else if (Array.isArray(payload?.data)) docs = payload.data;
+
+  return {
+    shape: Array.isArray(payload) ? 'array' : typeof payload,
+    keys,
+    documentArrayFound: Boolean(docs),
+    total: docs ? docs.length : null,
+    syntheticCount: docs ? docs.filter(item => syntheticRe.test(JSON.stringify(item))).length : null,
+  };
+}
+
 chromium.launch = async (...args) => {
   const browser = await originalLaunch(...args);
   const originalNewContext = browser.newContext.bind(browser);
@@ -49,7 +83,8 @@ chromium.launch = async (...args) => {
             const page = await originalNewPage(...pageArgs);
             let uploadRefreshScheduled = false;
 
-            // Safe CI diagnostics only: method/status/path, never headers, query strings or bodies.
+            // Safe CI diagnostics only: method/status/path and sanitized payload shape.
+            // Never print headers, query strings, response bodies, document names or token values.
             page.on('response', response => {
               try {
                 const request = response.request();
@@ -60,10 +95,20 @@ chromium.launch = async (...args) => {
                   console.log(`CI_NET ${method} ${response.status()} ${url.pathname}`);
                 }
 
-                // The upload endpoint persists successfully but v39 does not always refresh
-                // its client-side document list immediately. After a successful synthetic
-                // CI upload, reload the current v39 page so the following assertions read
-                // the server-side source of truth.
+                if (url.pathname === '/api/documents' && (method === 'GET' || method === 'POST')) {
+                  void (async () => {
+                    try {
+                      const payload = await response.json();
+                      console.log(`CI_API ${method} ${JSON.stringify(summarizeDocumentPayload(payload, method))}`);
+                    } catch {
+                      console.log(`CI_API ${method} {\"jsonReadable\":false}`);
+                    }
+                  })();
+                }
+
+                // The upload endpoint may persist successfully without immediately refreshing
+                // the client-side list. Reload after a successful HTTP response so assertions
+                // can read the server-side source of truth.
                 if (
                   method === 'POST' &&
                   url.pathname === '/api/documents' &&
