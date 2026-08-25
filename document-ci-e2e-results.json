@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T19:25:00.710Z",
+  "generatedAt": "2026-08-25T12:17:57.588Z",
   "baseUrl": "https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site",
   "environment": "github-actions-playwright-chromium",
   "viewportMobile": "390x844",
@@ -8,15 +8,32 @@
   "results": [
     {
       "id": "authentication",
+      "success": true,
+      "startedAt": "2026-08-25T12:17:50.085Z",
+      "finishedAt": "2026-08-25T12:17:52.871Z",
+      "details": {
+        "chatgptSessionAccepted": true,
+        "inviteRequired": false
+      }
+    },
+    {
+      "id": "association-rendering",
       "success": false,
-      "startedAt": "2026-08-24T19:24:57.530Z",
-      "finishedAt": "2026-08-24T19:25:00.667Z",
-      "error": "Error: Invite field not found after loading authenticated ChatGPT storage state. emailFieldPresent=false; controls=[{\"tag\":\"A\",\"type\":null,\"name\":null,\"text\":\"Continue with ChatGPT\"},{\"tag\":\"A\",\"type\":null,\"name\":null,\"text\":\"Privacy Policy\"}]\n    at authenticate (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:104:11)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:314:48\n    at async record (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:314:5"
+      "startedAt": "2026-08-25T12:17:52.889Z",
+      "finishedAt": "2026-08-25T12:17:55.510Z",
+      "error": "Error: Upload button not found\n    at openUpload (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:130:33)\n    at async submitUpload (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:188:16)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:327:29\n    at async record (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:321:7"
+    },
+    {
+      "id": "mobile-real-upload-390x844",
+      "success": false,
+      "startedAt": "2026-08-25T12:17:55.510Z",
+      "finishedAt": "2026-08-25T12:17:57.559Z",
+      "error": "Error: Upload button not found\n    at openUpload (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:130:33)\n    at async submitUpload (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:188:16)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:345:29\n    at async record (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:339:7"
     }
   ],
   "summary": {
-    "total": 1,
-    "passed": 0,
-    "failed": 1
+    "total": 3,
+    "passed": 1,
+    "failed": 2
   }
 }
