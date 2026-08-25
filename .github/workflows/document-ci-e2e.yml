@@ -7,6 +7,7 @@ on:
     paths:
       - 'document-ci-e2e.mjs'
       - 'document-ci-token-preload.mjs'
+      - 'document-ci-unique-file-preload.mjs'
       - '.github/workflows/document-ci-e2e.yml'
 
 permissions:
@@ -43,7 +44,7 @@ jobs:
           chmod 600 playwright-empty-storage-state.json
 
       - name: Run external document E2E with scoped v39 CI auth
-        run: node --import ./document-ci-token-preload.mjs document-ci-e2e.mjs
+        run: node --import ./document-ci-unique-file-preload.mjs document-ci-e2e.mjs
         continue-on-error: true
 
       - name: Remove temporary storage state
