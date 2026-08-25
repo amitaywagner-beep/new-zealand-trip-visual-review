@@ -17,7 +17,14 @@ chromium.launch = async (...args) => {
     get(target, prop) {
       if (prop === 'newContext') {
         return async (options = {}) => {
-          const context = await originalNewContext(options);
+          // BrowserContext routing does not reliably intercept requests handled by
+          // Service Workers. Block them in this isolated CI run so every request
+          // to v39-ci passes through the scoped route below.
+          const context = await originalNewContext({
+            ...options,
+            serviceWorkers: 'block',
+          });
+
           await context.route('**/*', async (route) => {
             const request = route.request();
             let url;
