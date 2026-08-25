@@ -6,7 +6,7 @@ on:
     branches: [main]
     paths:
       - 'document-ci-e2e.mjs'
-      - 'document-ci-preauth.mjs'
+      - 'document-ci-token-preload.mjs'
       - '.github/workflows/document-ci-e2e.yml'
 
 permissions:
@@ -18,10 +18,10 @@ jobs:
     timeout-minutes: 15
     env:
       VISUAL_REVIEW_BASE_URL: https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site
-      DOCUMENT_E2E_EMAIL: ${{ secrets.DOCUMENT_E2E_EMAIL }}
-      DOCUMENT_E2E_INVITE_CODE: ${{ secrets.DOCUMENT_E2E_INVITE_CODE }}
-      PLAYWRIGHT_STORAGE_STATE_B64: ${{ secrets.PLAYWRIGHT_STORAGE_STATE_B64 }}
-      PLAYWRIGHT_STORAGE_STATE_PATH: playwright-storage-state.json
+      V39_CI_TEST_TOKEN: ${{ secrets.V39_CI_TEST_TOKEN }}
+      DOCUMENT_E2E_EMAIL: ci@example.invalid
+      DOCUMENT_E2E_INVITE_CODE: ci-token-auth
+      PLAYWRIGHT_STORAGE_STATE_PATH: playwright-empty-storage-state.json
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -37,31 +37,18 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Restore authenticated Playwright storage state
-        shell: bash
+      - name: Create empty Playwright storage state
         run: |
-          if [ -z "$PLAYWRIGHT_STORAGE_STATE_B64" ]; then
-            echo "PLAYWRIGHT_STORAGE_STATE_B64 is missing"
-            printf '%s\n' '{"cookies":[],"origins":[]}' > playwright-storage-state.json
-          else
-            printf '%s' "$PLAYWRIGHT_STORAGE_STATE_B64" | base64 --decode > playwright-storage-state.json.gz
-            gzip -dc playwright-storage-state.json.gz > playwright-storage-state.json
-            rm -f playwright-storage-state.json.gz
-          fi
-          chmod 600 playwright-storage-state.json
-          node -e "const fs=require('fs'); const x=JSON.parse(fs.readFileSync('playwright-storage-state.json','utf8')); if(!Array.isArray(x.cookies)||!Array.isArray(x.origins)) throw new Error('Invalid Playwright storage state'); console.log('Storage state JSON loaded; cookies:',x.cookies.length,'origins:',x.origins.length)"
+          printf '%s\n' '{"cookies":[],"origins":[]}' > playwright-empty-storage-state.json
+          chmod 600 playwright-empty-storage-state.json
 
-      - name: Complete ChatGPT SSO for isolated v39
-        run: node document-ci-preauth.mjs
+      - name: Run external document E2E with scoped v39 CI auth
+        run: node --import ./document-ci-token-preload.mjs document-ci-e2e.mjs
         continue-on-error: true
 
-      - name: Run external document E2E
-        run: node document-ci-e2e.mjs
-        continue-on-error: true
-
-      - name: Remove sensitive storage state
+      - name: Remove temporary storage state
         if: always()
-        run: rm -f playwright-storage-state.json playwright-storage-state.json.gz
+        run: rm -f playwright-empty-storage-state.json
 
       - name: Upload E2E artifacts
         if: always()
