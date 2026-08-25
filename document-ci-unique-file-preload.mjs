@@ -5,9 +5,8 @@ import { chromium } from 'playwright';
 // reuses one tiny local PDF fixture, so make each browser-selected synthetic
 // fixture unique without touching the application or any real user data.
 //
-// This layer also removes two CI-only timing races:
-// 1. a fresh #bookings navigation can finish before the upload controls hydrate;
-// 2. the token preload's post-upload refresh can overlap an explicit test reload.
+// This layer also removes CI-only timing races and emits only sanitized
+// association diagnostics for the synthetic test document.
 const previousLaunch = chromium.launch.bind(chromium);
 
 chromium.launch = async (...args) => {
@@ -48,13 +47,49 @@ chromium.launch = async (...args) => {
               }, true);
             });
 
+            // Report only whether the synthetic upload response persisted the
+            // expected public association IDs. Never print document/user data.
+            page.on('response', response => {
+              void (async () => {
+                try {
+                  const request = response.request();
+                  const url = new URL(response.url());
+                  if (request.method() !== 'POST' || url.pathname !== '/api/documents') return;
+                  const payload = await response.json();
+                  const documentObject = payload?.document && typeof payload.document === 'object' ? payload.document : null;
+                  const associations = payload?.associations ?? documentObject?.associations ?? null;
+                  const serialized = JSON.stringify(associations ?? null);
+                  console.log('CI_ASSOC ' + JSON.stringify({
+                    hasDay06: /day-06/i.test(serialized),
+                    hasHobbiton: /hobbiton/i.test(serialized),
+                    associationsPresent: associations != null,
+                  }));
+                } catch {}
+              })();
+            });
+
             // The underlying auth layer already wraps goto. Add one final CI-only
             // readiness gate so the test never probes for the upload button before
-            // the authenticated document hub has hydrated.
+            // the authenticated document hub has hydrated. If the inline viewer is
+            // open, close it before returning to #bookings so it cannot intercept
+            // the cleanup/delete click.
             const previousGoto = page.goto.bind(page);
             page.goto = async (...gotoArgs) => {
-              const response = await previousGoto(...gotoArgs);
               const target = String(gotoArgs[0] || '');
+              if (target.includes('#bookings')) {
+                const viewer = page.locator('.document-viewer-shell,[role="dialog"]').first();
+                if (await viewer.count() && await viewer.isVisible().catch(() => false)) {
+                  const closeButton = viewer.getByRole('button', { name: /סגירה|סגור|close|×|✕/i }).first();
+                  if (await closeButton.count() && await closeButton.isVisible().catch(() => false)) {
+                    await closeButton.click().catch(() => {});
+                  } else {
+                    await page.keyboard.press('Escape').catch(() => {});
+                  }
+                  await viewer.waitFor({ state: 'hidden', timeout: 3000 }).catch(() => {});
+                }
+              }
+
+              const response = await previousGoto(...gotoArgs);
               if (target.includes('#bookings')) {
                 await page.locator('.documents-hub').first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {});
                 await page.getByRole('button', { name: /העלאת מסמך/i }).first().waitFor({ state: 'visible', timeout: 15000 }).catch(() => {});
