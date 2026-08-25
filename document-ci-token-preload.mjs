@@ -17,9 +17,6 @@ chromium.launch = async (...args) => {
     get(target, prop) {
       if (prop === 'newContext') {
         return async (options = {}) => {
-          // BrowserContext routing does not reliably intercept requests handled by
-          // Service Workers. Block them in this isolated CI run so every request
-          // to v39-ci passes through the scoped route below.
           const context = await originalNewContext({
             ...options,
             serviceWorkers: 'block',
@@ -46,6 +43,21 @@ chromium.launch = async (...args) => {
               },
             });
           });
+
+          // v39 resolves CI auth server-side and then hydrates the document controls.
+          // Give that UI a little time after navigation in every fresh context.
+          const originalNewPage = context.newPage.bind(context);
+          context.newPage = async (...pageArgs) => {
+            const page = await originalNewPage(...pageArgs);
+            const originalGoto = page.goto.bind(page);
+            page.goto = async (...gotoArgs) => {
+              const response = await originalGoto(...gotoArgs);
+              await page.waitForTimeout(1200);
+              return response;
+            };
+            return page;
+          };
+
           return context;
         };
       }
