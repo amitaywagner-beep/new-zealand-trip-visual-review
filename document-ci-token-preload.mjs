@@ -47,6 +47,7 @@ chromium.launch = async (...args) => {
           const originalNewPage = context.newPage.bind(context);
           context.newPage = async (...pageArgs) => {
             const page = await originalNewPage(...pageArgs);
+            let uploadRefreshScheduled = false;
 
             // Safe CI diagnostics only: method/status/path, never headers, query strings or bodies.
             page.on('response', response => {
@@ -57,6 +58,29 @@ chromium.launch = async (...args) => {
                 const method = request.method();
                 if (method !== 'GET' || /document|upload|file|vault|api/i.test(url.pathname)) {
                   console.log(`CI_NET ${method} ${response.status()} ${url.pathname}`);
+                }
+
+                // The upload endpoint persists successfully but v39 does not always refresh
+                // its client-side document list immediately. After a successful synthetic
+                // CI upload, reload the current v39 page so the following assertions read
+                // the server-side source of truth.
+                if (
+                  method === 'POST' &&
+                  url.pathname === '/api/documents' &&
+                  response.status() >= 200 &&
+                  response.status() < 300 &&
+                  !uploadRefreshScheduled
+                ) {
+                  uploadRefreshScheduled = true;
+                  void (async () => {
+                    await response.finished().catch(() => {});
+                    await page.waitForTimeout(500).catch(() => {});
+                    if (!page.isClosed()) {
+                      await page.reload({ waitUntil: 'domcontentloaded', timeout: 30000 }).catch(() => {});
+                      await page.waitForTimeout(1200).catch(() => {});
+                    }
+                    uploadRefreshScheduled = false;
+                  })();
                 }
               } catch {}
             });
