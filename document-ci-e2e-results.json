@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T12:20:54.362Z",
+  "generatedAt": "2026-08-25T12:26:59.714Z",
   "baseUrl": "https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site",
   "environment": "github-actions-playwright-chromium",
   "viewportMobile": "390x844",
@@ -9,8 +9,8 @@
     {
       "id": "authentication",
       "success": true,
-      "startedAt": "2026-08-25T12:20:47.693Z",
-      "finishedAt": "2026-08-25T12:20:50.521Z",
+      "startedAt": "2026-08-25T12:26:07.665Z",
+      "finishedAt": "2026-08-25T12:26:11.773Z",
       "details": {
         "chatgptSessionAccepted": true,
         "inviteRequired": false
@@ -19,16 +19,16 @@
     {
       "id": "association-rendering",
       "success": false,
-      "startedAt": "2026-08-25T12:20:50.536Z",
-      "finishedAt": "2026-08-25T12:20:52.468Z",
-      "error": "Error: Upload button not found\n    at openUpload (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:130:33)\n    at async submitUpload (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:188:16)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:327:29\n    at async record (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:321:7"
+      "startedAt": "2026-08-25T12:26:11.784Z",
+      "finishedAt": "2026-08-25T12:26:35.532Z",
+      "error": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n  - waiting for locator('.day-drawer').first().locator('.document-row[data-document-id]').filter({ hasText: 'CI association test 1787660767368.pdf' }).first() to be visible\n\n    at verifyDay (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:256:13)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:330:25\n    at async record (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:321:7"
     },
     {
       "id": "mobile-real-upload-390x844",
       "success": false,
-      "startedAt": "2026-08-25T12:20:52.468Z",
-      "finishedAt": "2026-08-25T12:20:54.339Z",
-      "error": "Error: Upload button not found\n    at openUpload (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:130:33)\n    at async submitUpload (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:188:16)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:345:29\n    at async record (file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:339:7"
+      "startedAt": "2026-08-25T12:26:35.532Z",
+      "finishedAt": "2026-08-25T12:26:59.683Z",
+      "error": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('.document-row[data-document-id]').filter({ hasText: 'CI mobile upload 1787660767368.pdf' }).first() to be visible\n\n    at submitUpload (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:216:13)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:345:29\n    at async record (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:38:21)\n    at async file:///home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:339:7"
     }
   ],
   "summary": {
