@@ -23,6 +23,16 @@ chromium.launch = async (...args) => {
           context.newPage = async (...pageArgs) => {
             const page = await previousNewPage(...pageArgs);
 
+            // The app uses a native confirmation dialog before destructive delete.
+            // Playwright dismisses dialogs by default when no listener exists, so
+            // explicitly accept only confirmation dialogs in this synthetic E2E.
+            page.on('dialog', async dialog => {
+              try {
+                if (dialog.type() === 'confirm') await dialog.accept();
+                else await dialog.dismiss();
+              } catch {}
+            });
+
             await page.addInitScript(() => {
               document.addEventListener('change', event => {
                 const input = event.target;
