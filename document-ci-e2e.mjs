@@ -244,12 +244,47 @@ async function verifyDay(page, displayName, expectedId) {
     const daysLink = page.getByText(/^ימים$/).first(); if (await daysLink.count()) await daysLink.click(); else await page.goto(`${BASE}/#days`);
   }
   await page.waitForTimeout(700);
-  const dayCard = page.locator('article,section,div').filter({ hasText: /יום\s*6[\s\S]*הוביטון|יום\s*6[\s\S]*Hobbiton/i }).filter({ has: page.getByText(/פתיחת היום/) }).first();
-  if (await dayCard.count()) await dayCard.getByText(/פתיחת היום/).first().click();
-  else {
-    const day6 = page.getByText(/יום\s*6\s*[·-]/).first(); if (await day6.count()) await day6.click();
+
+  // Select the opener from the smallest local container that belongs only to Day 6.
+  // The previous broad `article,section,div` locator could match the whole days list,
+  // causing `.first()` to open Day 1 while the assertion expected Day 6.
+  const openers = page.locator('button,a,[role="button"]').filter({ hasText: /פתיחת היום/ });
+  let day6Opener = null;
+  const openerCount = await openers.count();
+  for (let i = 0; i < openerCount; i++) {
+    const opener = openers.nth(i);
+    if (!await opener.isVisible().catch(() => false)) continue;
+    const isDay6 = await opener.evaluate(el => {
+      let node = el;
+      for (let depth = 0; node && depth < 8; depth++, node = node.parentElement) {
+        const text = (node.innerText || '').replace(/\s+/g, ' ');
+        const dayNumbers = [...text.matchAll(/יום\s*(\d{1,2})\b/g)].map(match => Number(match[1]));
+        if (dayNumbers.includes(6) && dayNumbers.every(day => day === 6)) return true;
+      }
+      return false;
+    }).catch(() => false);
+    if (isDay6) { day6Opener = opener; break; }
   }
-  await page.waitForTimeout(700);
+
+  if (!day6Opener) {
+    await screenshot(page, 'day-6-opener-not-found');
+    throw new Error(`Could not isolate the Day 6 opener from ${openerCount} visible day controls`);
+  }
+
+  const day6ResponsePromise = page.waitForResponse(response => {
+    try {
+      const url = new URL(response.url());
+      return url.pathname === '/api/documents' && url.searchParams.get('dayId') === 'day-06' && response.status() < 500;
+    } catch { return false; }
+  }, { timeout: 10000 }).catch(() => null);
+
+  await day6Opener.click();
+  const day6Response = await day6ResponsePromise;
+  if (!day6Response) {
+    await screenshot(page, 'day-6-request-not-observed');
+    throw new Error('Opening Day 6 did not issue GET /api/documents?dayId=day-06');
+  }
+
   const scope = page.locator('.day-drawer').first();
   await scope.waitFor({ state: 'visible', timeout: 10000 });
   const doc = scope.locator('.document-row[data-document-id]').filter({ hasText: displayName }).first();
