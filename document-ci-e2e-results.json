@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T07:44:45.951Z",
+  "generatedAt": "2026-08-26T07:56:52.744Z",
   "baseUrl": "https://amitai-new-zealand-v39-ci.amitaywagner.chatgpt.site",
   "environment": "github-actions-playwright-chromium",
   "viewportMobile": "390x844",
@@ -9,8 +9,8 @@
     {
       "id": "authentication",
       "success": true,
-      "startedAt": "2026-08-26T07:43:07.424Z",
-      "finishedAt": "2026-08-26T07:43:12.233Z",
+      "startedAt": "2026-08-26T07:56:09.187Z",
+      "finishedAt": "2026-08-26T07:56:14.189Z",
       "details": {
         "chatgptSessionAccepted": true,
         "inviteRequired": false
@@ -19,10 +19,10 @@
     {
       "id": "association-rendering",
       "success": true,
-      "startedAt": "2026-08-26T07:43:12.244Z",
-      "finishedAt": "2026-08-26T07:43:56.279Z",
+      "startedAt": "2026-08-26T07:56:14.198Z",
+      "finishedAt": "2026-08-26T07:56:31.840Z",
       "details": {
-        "documentId": "document-98ef0b5b-a117-4d0a-97f3-935cbe5430b4",
+        "documentId": "document-b17a1158-d0dc-4b30-b36c-1d00830713d4",
         "idsConsistent": true,
         "hub": true,
         "booking": true,
@@ -31,15 +31,25 @@
     },
     {
       "id": "mobile-real-upload-390x844",
-      "success": false,
-      "startedAt": "2026-08-26T07:43:56.279Z",
-      "finishedAt": "2026-08-26T07:44:45.928Z",
-      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: /מחיק|אישור|כן/i }).last()\n    - locator resolved to <button disabled class=\"document-delete\">מחיקה</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 100ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not enabled\n    - retrying click action\n      - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n  - element was detached from the DOM, retrying\n\n    at deleteDocument (/home/runner/work/new-zealand-trip-visual-review/new-zealand-trip-visual-review/document-ci-e2e.mjs:328:90)\n  "
+      "success": true,
+      "startedAt": "2026-08-26T07:56:31.840Z",
+      "finishedAt": "2026-08-26T07:56:52.719Z",
+      "details": {
+        "viewport": "390x844",
+        "touch": true,
+        "documentId": "document-d2385fad-808d-4717-b336-3bb812c5a5c4",
+        "persisted": true,
+        "opened": {
+          "method": "response",
+          "status": 200
+        },
+        "deleted": true
+      }
     }
   ],
   "summary": {
     "total": 3,
-    "passed": 2,
-    "failed": 1
+    "passed": 3,
+    "failed": 0
   }
 }
