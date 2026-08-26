@@ -323,14 +323,40 @@ async function deleteDocument(page, displayName) {
     if (await menu.count()) { await menu.click(); del = page.getByRole('button', { name:/מחיק/i }).last(); }
   }
   if (!await del.count()) throw new Error('Delete control not found');
+
+  const matchesDeleteResponse = response => {
+    try {
+      const url = new URL(response.url());
+      return response.request().method() === 'DELETE' && url.pathname.startsWith('/api/documents/') && response.status() < 500;
+    } catch { return false; }
+  };
+
+  // Browser confirm dialogs are auto-accepted by the CI preload. Arm the network
+  // observer before the click so we do not mistake the now-disabled original
+  // delete button for a second in-page confirmation control.
+  let deleteResponsePromise = page.waitForResponse(matchesDeleteResponse, { timeout:5000 }).catch(() => null);
   await del.click();
-  const confirm = page.getByRole('button', { name:/מחיק|אישור|כן/i }).last();
-  if (await confirm.count() && await confirm.isVisible().catch(()=>false)) await confirm.click();
-  await page.waitForTimeout(800);
+  let deleteResponse = await deleteResponsePromise;
+
+  // Fallback only for a genuine custom in-page confirmation UI.
+  if (!deleteResponse) {
+    const confirms = page.getByRole('button', { name:/^(מחיקה|אישור|כן)$/i });
+    const count = await confirms.count();
+    for (let i = count - 1; i >= 0; i--) {
+      const confirm = confirms.nth(i);
+      if (!await confirm.isVisible().catch(() => false) || !await confirm.isEnabled().catch(() => false)) continue;
+      deleteResponsePromise = page.waitForResponse(matchesDeleteResponse, { timeout:5000 }).catch(() => null);
+      await confirm.click({ timeout:3000 });
+      deleteResponse = await deleteResponsePromise;
+      break;
+    }
+  }
+
+  await row.waitFor({ state:'detached', timeout:5000 }).catch(() => {});
   await page.reload({ waitUntil:'domcontentloaded' }); await page.waitForTimeout(800);
   const remains = await page.locator('.document-row[data-document-id]').filter({ hasText:displayName }).count();
   if (remains) throw new Error('Document still present after delete and reload');
-  return { deleted:true };
+  return { deleted:true, deleteStatus:deleteResponse?.status() ?? null };
 }
 
 if (!EMAIL || !INVITE || !STORAGE_STATE_PATH) {
