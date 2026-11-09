@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-08-26T08:26:32.259Z",
   "sourceSiteVersion": "39",
-  "captureCompletedAt": "2026-11-08T10:38:17.720Z",
+  "captureCompletedAt": "2026-11-09T11:51:38.294Z",
   "mode": "screenshots",
   "captureEnvironment": "github-actions-playwright",
   "sourceManifestUrl": "https://amitai-new-zealand-trip.amitaywagner.chatgpt.site/visual-review/manifest.json",
@@ -18,7 +18,7 @@
       "state": {
         "screen": "now"
       },
-      "capturedAt": "2026-11-08T10:32:29.771Z",
+      "capturedAt": "2026-11-09T11:45:43.844Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -39,7 +39,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "capturedAt": "2026-11-08T10:32:35.021Z",
+      "capturedAt": "2026-11-09T11:45:48.630Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -60,7 +60,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "capturedAt": "2026-11-08T10:32:41.241Z",
+      "capturedAt": "2026-11-09T11:45:54.934Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -81,7 +81,7 @@
         "screen": "route",
         "mapStyle": "map"
       },
-      "capturedAt": "2026-11-08T10:32:46.768Z",
+      "capturedAt": "2026-11-09T11:46:00.690Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -101,7 +101,7 @@
       "state": {
         "screen": "days"
       },
-      "capturedAt": "2026-11-08T10:32:51.857Z",
+      "capturedAt": "2026-11-09T11:46:05.800Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -121,7 +121,7 @@
       "state": {
         "screen": "bookings"
       },
-      "capturedAt": "2026-11-08T10:32:56.857Z",
+      "capturedAt": "2026-11-09T11:46:11.011Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -143,7 +143,7 @@
         "mockDocuments": true,
         "anchor": ".documents-hub"
       },
-      "capturedAt": "2026-11-08T10:33:01.571Z",
+      "capturedAt": "2026-11-09T11:46:15.743Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -166,7 +166,7 @@
         "mockDocumentUploadDialog": true,
         "anchor": ".document-upload-form"
       },
-      "capturedAt": "2026-11-08T10:33:06.344Z",
+      "capturedAt": "2026-11-09T11:46:20.651Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -189,7 +189,7 @@
         "selectedBookingId": "hobbiton",
         "anchor": "[data-booking-id='hobbiton']"
       },
-      "capturedAt": "2026-11-08T10:33:11.249Z",
+      "capturedAt": "2026-11-09T11:46:25.403Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -211,7 +211,7 @@
         "mockDocuments": true,
         "openDayNumber": 6
       },
-      "capturedAt": "2026-11-08T10:33:16.072Z",
+      "capturedAt": "2026-11-09T11:46:30.400Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -233,7 +233,7 @@
         "mockDocuments": true,
         "anchor": ".documents-hub"
       },
-      "capturedAt": "2026-11-08T10:33:20.843Z",
+      "capturedAt": "2026-11-09T11:46:35.264Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -256,7 +256,7 @@
         "mockDocumentUploadDialog": true,
         "anchor": ".document-upload-form"
       },
-      "capturedAt": "2026-11-08T10:33:25.649Z",
+      "capturedAt": "2026-11-09T11:46:41.626Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -278,7 +278,7 @@
         "mockDocuments": true,
         "openDayNumber": 6
       },
-      "capturedAt": "2026-11-08T10:33:31.695Z",
+      "capturedAt": "2026-11-09T11:46:46.539Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -298,7 +298,7 @@
       "state": {
         "screen": "preparations"
       },
-      "capturedAt": "2026-11-08T10:33:36.398Z",
+      "capturedAt": "2026-11-09T11:46:51.360Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -320,7 +320,7 @@
         "mapStyle": "satellite",
         "anchor": ".atlas-route-controls"
       },
-      "capturedAt": "2026-11-08T10:33:41.809Z",
+      "capturedAt": "2026-11-09T11:46:56.833Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -344,7 +344,7 @@
         "focusStop": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:33:47.052Z",
+      "capturedAt": "2026-11-09T11:47:02.233Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -368,7 +368,7 @@
         "focusStop": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:33:52.453Z",
+      "capturedAt": "2026-11-09T11:47:07.979Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -392,7 +392,7 @@
         "focusStop": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:33:58.279Z",
+      "capturedAt": "2026-11-09T11:47:14.184Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -416,7 +416,7 @@
         "focusStop": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:34:03.841Z",
+      "capturedAt": "2026-11-09T11:47:19.637Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -439,7 +439,7 @@
         "selectedSegmentId": "road-segment-09",
         "anchor": "#road-segment-09"
       },
-      "capturedAt": "2026-11-08T10:34:09.278Z",
+      "capturedAt": "2026-11-09T11:47:24.931Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -463,7 +463,7 @@
         "focusSegment": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:34:15.362Z",
+      "capturedAt": "2026-11-09T11:47:31.242Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -479,15 +479,23 @@
             "error": "net::ERR_ABORTED"
           },
           {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/254",
+            "error": "net::ERR_ABORTED"
+          },
+          {
             "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/251",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/254",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/252",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/252",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/253",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/252",
             "error": "net::ERR_ABORTED"
           },
           {
@@ -499,7 +507,19 @@
             "error": "net::ERR_ABORTED"
           },
           {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/158/255",
+            "error": "net::ERR_ABORTED"
+          },
+          {
             "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/251",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/254",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/250",
             "error": "net::ERR_ABORTED"
           },
           {
@@ -511,11 +531,15 @@
             "error": "net::ERR_ABORTED"
           },
           {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/255",
+            "error": "net::ERR_ABORTED"
+          },
+          {
             "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/250",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/255",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/250",
             "error": "net::ERR_ABORTED"
           },
           {
@@ -524,30 +548,6 @@
           },
           {
             "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/159/253",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/158/254",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/157/254",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/159/254",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/156/252",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/160/252",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/160/253",
             "error": "net::ERR_ABORTED"
           }
         ]
@@ -566,7 +566,7 @@
         "mapStyle": "satellite",
         "anchor": ".route-overview-graphic"
       },
-      "capturedAt": "2026-11-08T10:34:20.885Z",
+      "capturedAt": "2026-11-09T11:47:36.454Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -589,7 +589,7 @@
         "selectedStopId": "auckland",
         "anchor": ".route-overview-graphic"
       },
-      "capturedAt": "2026-11-08T10:34:26.101Z",
+      "capturedAt": "2026-11-09T11:47:43.171Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -612,7 +612,7 @@
         "selectedStopId": "palmerston",
         "anchor": ".route-overview-graphic"
       },
-      "capturedAt": "2026-11-08T10:34:31.516Z",
+      "capturedAt": "2026-11-09T11:47:48.353Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -634,7 +634,7 @@
         "mapStyle": "satellite",
         "anchor": ".regional-route-selector"
       },
-      "capturedAt": "2026-11-08T10:34:36.729Z",
+      "capturedAt": "2026-11-09T11:47:53.681Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -657,7 +657,7 @@
         "selectedRegionId": "coromandel",
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:34:42.944Z",
+      "capturedAt": "2026-11-09T11:48:00.105Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -761,7 +761,7 @@
         "selectedRegionId": "rotorua-taupo",
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:34:49.600Z",
+      "capturedAt": "2026-11-09T11:48:06.387Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -769,7 +769,27 @@
         "pageErrors": [],
         "failedRequests": [
           {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/127",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/252",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/254",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/158/251",
+            "error": "net::ERR_ABORTED"
+          },
+          {
             "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/158/254",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/252",
             "error": "net::ERR_ABORTED"
           },
           {
@@ -777,7 +797,7 @@
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/254",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/251",
             "error": "net::ERR_ABORTED"
           },
           {
@@ -793,15 +813,23 @@
             "error": "net::ERR_ABORTED"
           },
           {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/155/253",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/250",
+            "error": "net::ERR_ABORTED"
+          },
+          {
             "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/255",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/252",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/253",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/253",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/155/251",
             "error": "net::ERR_ABORTED"
           },
           {
@@ -813,39 +841,11 @@
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/255",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/250",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/155/250",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/250",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/255",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/156/252",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/156/253",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/157/254",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/158/251",
-            "error": "net::ERR_ABORTED"
-          },
-          {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/156/254",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/255",
             "error": "net::ERR_ABORTED"
           }
         ]
@@ -865,7 +865,7 @@
         "selectedRegionId": "taranaki",
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:34:55.996Z",
+      "capturedAt": "2026-11-09T11:48:12.986Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -873,83 +873,83 @@
         "pageErrors": [],
         "failedRequests": [
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/254",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/78/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/159/254",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/78/125",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/314/503",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/79/125",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/316/501",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/79/127",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/318/503",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/314/502",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/79/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/317/501",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/127",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/318/502",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/80/0",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/318/504",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/251",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/314/501",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/252",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/318/501",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/251",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/318/505",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/253",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/317/503",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/250",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/315/502",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/254",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/317/502",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/250",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/314/503",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/253",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/316/501",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/156/250",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/318/503",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/254",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/314/502",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/157/253",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/318/502",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/159/251",
             "error": "net::ERR_ABORTED"
           }
         ]
@@ -969,7 +969,7 @@
         "selectedRegionId": "tongariro",
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:35:02.193Z",
+      "capturedAt": "2026-11-09T11:48:19.400Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -977,83 +977,83 @@
         "pageErrors": [],
         "failedRequests": [
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/633/1012",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/78/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/632/1009",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/79/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/634/1009",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/78/125",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/631/1010",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/78/127",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/631/1011",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/79/125",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/635/1010",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/79/127",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/635/1011",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/77/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/631/1009",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/80/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/631/1012",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/77/125",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/633/1008",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/80/125",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/633/1013",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/80/127",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/632/1013",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/78/124",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/634/1008",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/78/0",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/634/1013",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/79/0",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/631/1008",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/635/1008",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/127",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/635/1013",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/79/127",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/10/634/1010",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/77/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/10/633/1012",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/80/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/10/632/1009",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/77/125",
             "error": "net::ERR_ABORTED"
           }
         ]
@@ -1073,7 +1073,7 @@
         "selectedRegionId": "hawkes-bay",
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:35:08.577Z",
+      "capturedAt": "2026-11-09T11:48:26.531Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1081,83 +1081,83 @@
         "pageErrors": [],
         "failedRequests": [
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/635/1014",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/78/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/634/1013",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/7/79/127",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/634/1016",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/633/1013",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/79/126",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/633/1016",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/125",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/635/1013",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/78/127",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/635/1016",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/79/0",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/632/1014",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/77/0",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/632/1015",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/7/80/0",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/636/1014",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/252",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/636/1015",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/254",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/632/1013",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/159/254",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/632/1016",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/253",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/636/1013",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/157/255",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/10/636/1016",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/252",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/10/635/1014",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/254",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/10/635/1015",
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/8/160/255",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/10/634/1016",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/157/254",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/10/633/1013",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/156/253",
             "error": "net::ERR_ABORTED"
           },
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/10/633/1016",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/8/157/251",
             "error": "net::ERR_ABORTED"
           }
         ]
@@ -1176,7 +1176,7 @@
         "mapStyle": "satellite",
         "anchor": ".regional-route-selector"
       },
-      "capturedAt": "2026-11-08T10:35:13.924Z",
+      "capturedAt": "2026-11-09T11:48:31.910Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1199,7 +1199,7 @@
         "selectedRegionId": "taranaki",
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:35:19.910Z",
+      "capturedAt": "2026-11-09T11:48:37.942Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1207,7 +1207,31 @@
         "pageErrors": [],
         "failedRequests": [
           {
-            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/6/38/62",
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/6/39/62",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/6/40/62",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/6/40/63",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/9/318/502",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/315/503",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/318/503",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/9/315/502",
             "error": "net::ERR_ABORTED"
           }
         ]
@@ -1225,7 +1249,7 @@
         "screen": "days",
         "openDayNumber": 1
       },
-      "capturedAt": "2026-11-08T10:35:24.776Z",
+      "capturedAt": "2026-11-09T11:48:44.136Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1248,7 +1272,7 @@
         "screen": "days",
         "openDayNumber": 4
       },
-      "capturedAt": "2026-11-08T10:35:29.723Z",
+      "capturedAt": "2026-11-09T11:48:49.081Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1271,7 +1295,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-11-08T10:35:36.389Z",
+      "capturedAt": "2026-11-09T11:48:54.045Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1294,7 +1318,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-11-08T10:35:41.322Z",
+      "capturedAt": "2026-11-09T11:48:58.911Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1317,7 +1341,7 @@
         "screen": "days",
         "openDayNumber": 5
       },
-      "capturedAt": "2026-11-08T10:35:46.237Z",
+      "capturedAt": "2026-11-09T11:49:03.974Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1340,7 +1364,7 @@
         "screen": "days",
         "openDayNumber": 14
       },
-      "capturedAt": "2026-11-08T10:35:51.142Z",
+      "capturedAt": "2026-11-09T11:49:08.932Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1363,7 +1387,7 @@
         "screen": "days",
         "openDayNumber": 18
       },
-      "capturedAt": "2026-11-08T10:35:56.041Z",
+      "capturedAt": "2026-11-09T11:49:13.862Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1387,7 +1411,7 @@
         "openDayNumber": 4,
         "anchor": ".day-mini-map-card"
       },
-      "capturedAt": "2026-11-08T10:36:00.911Z",
+      "capturedAt": "2026-11-09T11:49:18.764Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1411,7 +1435,7 @@
         "openDayNumber": 6,
         "anchor": ".day-mini-map-card"
       },
-      "capturedAt": "2026-11-08T10:36:05.795Z",
+      "capturedAt": "2026-11-09T11:49:23.717Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1435,7 +1459,7 @@
         "hotelId": "manha",
         "anchor": "#hotel-review-manha"
       },
-      "capturedAt": "2026-11-08T10:36:10.459Z",
+      "capturedAt": "2026-11-09T11:49:28.429Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1457,7 +1481,7 @@
         "hotelId": "devon",
         "anchor": "#hotel-review-devon"
       },
-      "capturedAt": "2026-11-08T10:36:15.158Z",
+      "capturedAt": "2026-11-09T11:49:33.262Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1480,7 +1504,7 @@
         "openGroceries": true,
         "anchor": "#hotel-review-le-chalet"
       },
-      "capturedAt": "2026-11-08T10:36:19.867Z",
+      "capturedAt": "2026-11-09T11:49:38.270Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1503,7 +1527,7 @@
         "returnDayNumber": 6,
         "anchor": "[data-booking-id='hobbiton']"
       },
-      "capturedAt": "2026-11-08T10:36:24.573Z",
+      "capturedAt": "2026-11-09T11:49:42.994Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1529,7 +1553,7 @@
         "returnDayNumber": 6,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:36:30.127Z",
+      "capturedAt": "2026-11-09T11:49:49.906Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1549,7 +1573,7 @@
       "state": {
         "screen": "now"
       },
-      "capturedAt": "2026-11-08T10:36:35.143Z",
+      "capturedAt": "2026-11-09T11:49:54.778Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1570,7 +1594,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "capturedAt": "2026-11-08T10:36:40.974Z",
+      "capturedAt": "2026-11-09T11:49:59.599Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1591,7 +1615,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "capturedAt": "2026-11-08T10:36:46.710Z",
+      "capturedAt": "2026-11-09T11:50:05.584Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1611,7 +1635,7 @@
       "state": {
         "screen": "days"
       },
-      "capturedAt": "2026-11-08T10:36:51.923Z",
+      "capturedAt": "2026-11-09T11:50:10.829Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1632,7 +1656,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-11-08T10:36:56.949Z",
+      "capturedAt": "2026-11-09T11:50:16.025Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1654,7 +1678,7 @@
       "state": {
         "screen": "bookings"
       },
-      "capturedAt": "2026-11-08T10:37:02.229Z",
+      "capturedAt": "2026-11-09T11:50:21.467Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1674,7 +1698,7 @@
       "state": {
         "screen": "preparations"
       },
-      "capturedAt": "2026-11-08T10:37:07.154Z",
+      "capturedAt": "2026-11-09T11:50:26.285Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1696,7 +1720,7 @@
         "mapStyle": "satellite",
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:37:13.791Z",
+      "capturedAt": "2026-11-09T11:50:31.844Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1720,7 +1744,7 @@
         "focusStop": true,
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:37:19.386Z",
+      "capturedAt": "2026-11-09T11:50:37.446Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1744,7 +1768,7 @@
         "reviewWaypointId": "waitomo",
         "anchor": ".atlas-route-layout"
       },
-      "capturedAt": "2026-11-08T10:37:25.118Z",
+      "capturedAt": "2026-11-09T11:50:43.106Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1766,7 +1790,7 @@
         "mapStyle": "satellite",
         "anchor": ".route-overview-graphic"
       },
-      "capturedAt": "2026-11-08T10:37:30.523Z",
+      "capturedAt": "2026-11-09T11:50:50.292Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1788,7 +1812,7 @@
         "mapStyle": "satellite",
         "anchor": ".route-overview-graphic"
       },
-      "capturedAt": "2026-11-08T10:37:35.773Z",
+      "capturedAt": "2026-11-09T11:50:55.492Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1811,7 +1835,7 @@
         "selectedStopId": "new-plymouth",
         "anchor": ".route-overview-graphic"
       },
-      "capturedAt": "2026-11-08T10:37:42.188Z",
+      "capturedAt": "2026-11-09T11:51:00.593Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1832,7 +1856,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "capturedAt": "2026-11-08T10:37:47.737Z",
+      "capturedAt": "2026-11-09T11:51:06.237Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1853,7 +1877,7 @@
         "screen": "route",
         "mapStyle": "satellite"
       },
-      "capturedAt": "2026-11-08T10:37:53.421Z",
+      "capturedAt": "2026-11-09T11:51:11.849Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1874,7 +1898,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-11-08T10:37:58.183Z",
+      "capturedAt": "2026-11-09T11:51:16.623Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1897,7 +1921,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-11-08T10:38:03.117Z",
+      "capturedAt": "2026-11-09T11:51:22.762Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1920,7 +1944,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "capturedAt": "2026-11-08T10:38:08.071Z",
+      "capturedAt": "2026-11-09T11:51:27.748Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1941,7 +1965,7 @@
         "screen": "now",
         "mockNow": "2026-11-05T08:48:00+13:00"
       },
-      "capturedAt": "2026-11-08T10:38:12.797Z",
+      "capturedAt": "2026-11-09T11:51:32.546Z",
       "success": true,
       "error": null,
       "consoleSummary": {
@@ -1962,7 +1986,7 @@
         "screen": "days",
         "openDayNumber": 6
       },
-      "capturedAt": "2026-11-08T10:38:17.686Z",
+      "capturedAt": "2026-11-09T11:51:38.258Z",
       "success": true,
       "error": null,
       "consoleSummary": {
